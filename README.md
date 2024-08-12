@@ -1,4 +1,4 @@
-# twopizza9621536.github.io
+# wushenrong.github.io
 
 My github.io site where I do some blogging.
 
