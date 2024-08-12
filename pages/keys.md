@@ -25,7 +25,7 @@ Verification of my accounts is provided by [Keyoxide][1].
 Please do not use DM or Email to send any private information as most of them
 do not use end to end encryption, provide forward secrecy, and anybody can see
 these messages. Please use [Signal][2] or [SimpleX][3] for advanced people. My
-Signal username is `TwoPizza9621536.01`.
+Signal username is `wushenrong.01`.
 
 [1]: https://keyoxide.org/twopizza9621536@gmail.com
 [2]: https://signal.org
