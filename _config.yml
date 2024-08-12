@@ -3,13 +3,13 @@ title: Samuel Wu's Blog
 tagline: Open source is a voluntary force
 description: >-
   A site for Samuel to blog about programming, technology, media, politics, etc.
-url: https://twopizza9621536.github.io
+url: https://wushenrong.github.io
 baseurl: ""
 excerpt_separator: <!-- more -->
 
 # Repository
-repository: TwoPizza9621536/twopizza9621536.github.io
-origin: https://github.com/TwoPizza9621536/twopizza9621536.github.io.git
+repository: wushenrong/wushenrong.github.io
+origin: https://github.com/wushenrong/wushenrong.github.io.git
 
 # Timezone and Locale
 timezone: America/New_York
@@ -19,12 +19,8 @@ lang: en-US
 # Author/Contact
 author:
   name: Samuel Wu
-  url: https://github.com/TwoPizza9621536
+  url: https://github.com/wushenrong
   email: twopizza9621536@gmail.com
-
-twitter:
-  username: TwoPizza9621536
-  card: summery
 
 # SEO
 google_site_verification: I7yhE_OKyT8UlfvQvfF9KQqu0rZRZcaMZ9Y5nQhGyQ8
