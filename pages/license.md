@@ -2,7 +2,7 @@
 layout: page
 title: License
 permalink: /license
-description: The License and Dependencies for twopizza9621536.github.io.
+description: The License and Dependencies for wushenrong.github.io.
 ---
 
 Content on this website is licensed under the [CC BY-SA 4.0][cc-by-sa-4.0].
@@ -51,7 +51,7 @@ The Keyoxide icon is from [keyoxide-artwork][3] and licensed under the
 [cc-by-sa-4.0]: https://creativecommons.org/licenses/by-sa/4.0/
 [MITL]: https://mit-license.org
 [OFL-1.1]: https://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
-[theme-github]: https://github.com/TwoPizza9621536/accessible-lanyon
+[theme-github]: https://github.com/wushenrong/accessible-lanyon
 
 [1]: https://lanyon.getpoole.com/
 [2]: https://fontawesome.com/license/free
