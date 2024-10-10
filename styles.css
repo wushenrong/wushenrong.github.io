@@ -8,6 +8,10 @@ h1 {
     color: indigo;
 }
 
+a {
+    text-decoration: none;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -19,4 +23,22 @@ h1 {
     padding: 20px 10px;
     background: white;
     border-radius: 25%;
+}
+
+.project h3 {
+    text-align: center;
+}
+
+.project p {
+    text-align: center;
+    margin: 20px;
+}
+
+.project img {
+    width: 325px;
+    height: 200px;
+    margin: auto;
+    border: 2px solid;
+    padding: 5px;
+    display: block;
 }
