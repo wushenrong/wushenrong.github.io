@@ -12,6 +12,27 @@ a {
     text-decoration: none;
 }
 
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 100px;
+    justify-content: center;
+}
+
+.about p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    line-height: 125%;
+}
+
+.about img {
+    width: 150px;
+    height: 200px;
+    border-radius: 25%;
+    border: 2px solid;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
