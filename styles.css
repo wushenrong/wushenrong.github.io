@@ -63,3 +63,9 @@ a {
     padding: 5px;
     display: block;
 }
+
+.contact img {
+    width: 268px;
+    height: 26px;
+    display: block;
+}
