@@ -27,6 +27,8 @@ kramdown
 Kramdown
 Krita
 Lanyon
+liblapacke
+libopenblas
 maxHeader
 mdate
 minHeader
