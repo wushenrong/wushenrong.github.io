@@ -52,13 +52,20 @@ jobs:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Minify site
-        run: >-
-          npm ci
-          npm run html
-          npm run css
-          npm run sitemap
-          npm run feed
+      - name: Install dependencies for minifiers
+        run: npm ci
+
+      - name: Minify HTML
+        run: npx run posthtml _site/**/*.html -o . -a
+
+      - name: Minify CSS
+        run: npx run postcss _site/**/*.css -r
+
+      - name: Minify RSS/Atom feed
+        run: npx run minify-xml --in-place _site/feed.xml
+
+      - name: Minify sitemap
+        run: npx run minify-xml --in-place _site/sitemap.xml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

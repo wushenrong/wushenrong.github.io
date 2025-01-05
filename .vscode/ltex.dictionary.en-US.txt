@@ -40,6 +40,7 @@ Octicons
 paginator
 pipx
 postcssrc
+posthtml
 Radeon
 ripgrep
 Róng
