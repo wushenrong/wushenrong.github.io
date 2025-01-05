@@ -9,6 +9,8 @@ description: >-
   I'm Samuel, a Chinese-American student interested in technology, open source,
   and video games. Currently working on a computer science degree.
 url: https://wushenrong.github.io
+repository: wushenrong/wushenrong.github.io
+
 # Favicon
 favicon:
   source: favicon.png
