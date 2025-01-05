@@ -56,7 +56,7 @@ jobs:
         run: npm ci
 
       - name: Minify HTML
-        run: npx posthtml _site/**/*.html -o . -a
+        run: npx posthtml '_site/**/*.html' -o . -a
 
       - name: Minify CSS
         run: npx postcss _site/**/*.css -r
@@ -66,6 +66,9 @@ jobs:
 
       - name: Minify sitemap
         run: npx minify-xml --in-place _site/sitemap.xml
+
+      - name: Minify SVG icons
+        run: npx minify-xml --in-place _site/assets/fa-icons.svg
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
