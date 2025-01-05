@@ -1,0 +1,83 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: MIT-0
+
+# Site information
+title: Samuel Wu
+tagline: What is loving without knowing we are left to die
+description: >-
+  I'm Samuel, a Chinese-American student interested in technology, open source,
+  and video games. Currently working on a computer science degree.
+url: https://wushenrong.github.io
+# Favicon
+favicon:
+  source: favicon.png
+
+# Timezone and Locale
+timezone: America/New_York
+locale: en-US
+lang: en-US
+
+# Author information
+author:
+  name: Samuel Wu
+  email: twopizza9621536@gmail.com
+  url: https://wushenrong.github.io
+
+permalink: pretty
+collections_dir: collections
+
+pagination:
+  enabled: true
+  per_page: 7
+  sort_reverse: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+  - scope:
+      path: "pages"
+    values:
+      layout: page
+
+jekyll-archives:
+  enabled:
+    - year
+
+header_pages:
+  - pages/about.md
+  - pages/contact.md
+  - pages/license.md
+
+# KaTeX support
+jektex:
+  ignore:
+    - "*.xml"
+
+# Latent Semantic Indexer
+lsi: true
+
+# Strict mode
+strict_front_matter: true
+liquid:
+  error_mode: strict
+  strict_filters: true
+
+# Exclude files
+exclude:
+  - frontmatter.json
+  - LICENSE
+  - LICENSES
+  - package-lock.json
+  - package.json
+  - postcss.config.js
+  - README.md
+  - REUSE.toml
+
+# Include files
+include:
+  - .well-known

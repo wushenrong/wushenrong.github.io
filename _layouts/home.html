@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<div class="home">
+  <h1 class="page-heading">{{ page.title | escape }}</h1>
+
+  {{ content }}
+
+  <ul class="post-list">
+    {%- for post in paginator.posts -%}
+      <li>
+        <span class="post-meta">
+          {{- post.date | date_to_long_string: 'ordinal', 'US' }}
+          | Reading time: ~{{ post.content | reading_time | pluralize: 'minute' -}}
+        </span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        {{ post.excerpt }}
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  <div class="pager">
+    <ul class="pagination">
+      {%- if paginator.previous_page -%}
+        <li>
+          <a rel="prev" href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">
+            {{- paginator.previous_page -}}
+          </a>
+        </li>
+      {%- else -%}
+        <li>
+          <div class="pager-edge">•</div>
+        </li>
+      {%- endif -%}
+      <li>
+        <div class="current-page">{{ paginator.page }}</div>
+      </li>
+      {%- if paginator.next_page -%}
+        <li>
+          <a rel="next" href="{{ paginator.next_page_path | relative_url }}" class="next-page">
+            {{- paginator.next_page -}}
+          </a>
+        </li>
+      {%- else -%}
+        <li>
+          <div class="pager-edge">•</div>
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+</div>

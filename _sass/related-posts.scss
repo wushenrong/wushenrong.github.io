@@ -1,0 +1,19 @@
+/*
+ * SPDX-FileCopyrightText: 2013 Mark Otto
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Related Posts
+ * https://github.com/poole/poole
+ */
+
+@charset "utf-8";
+
+.post-related {
+  padding-top: 2rem;
+  border-top: 1px solid #111;
+
+  @media (prefers-color-scheme: dark) {
+    border-top: 1px solid #eee;
+  }
+}

@@ -1,0 +1,35 @@
+---
+---
+
+/*
+ * SPDX-FileCopyrightText: 2025 Samuel Wu
+ *
+ * SPDX-License-Identifier: CC-BY-SA-4.0
+ */
+
+@charset "utf-8";
+
+@use "minima";
+@use "github";
+@use "sr-only";
+@use "related-posts";
+
+/*
+ * Horizontal lists
+ * https://stackoverflow.com/a/2145208
+ */
+.post-years {
+  list-style: none;
+
+  li {
+    display: inline;
+  }
+}
+
+// Simplified Chinese support
+:lang("cmn-Hans") {
+  font-family: system-ui, "Segoe UI", Roboto, Ubuntu, "Liberation Sans",
+    "Noto Sans", Arimo, Helvetica, Arial, "PingFang SC", "苹方-简",
+    "Microsoft YaHei UI", "微软雅黑", "Noto Sans SC", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

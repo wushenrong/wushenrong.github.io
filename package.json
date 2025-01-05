@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.6.3",
+    "cssnano": "^7.0.6",
+    "cssnano-preset-advanced": "^7.0.6",
+    "htmlnano": "^2.1.1",
+    "minify-xml": "^4.5.2",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "posthtml": "^0.16.6",
+    "posthtml-cli": "^0.10.0",
+    "prettier": "3.4.2",
+    "terser": "^5.37.0"
+  },
+  "name": "wushenrong.github.io",
+  "private": true,
+  "scripts": {
+    "css": "postcss _site/**/*.css -r",
+    "feed": "minify-xml --in-place _site/feed.xml",
+    "html": "posthtml _site/**/*.html -o . -a",
+    "sitemap": "minify-xml --in-place _site/sitemap.xml"
+  }
+}

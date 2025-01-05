@@ -1,0 +1,71 @@
+/*
+ * SPDX-FileCopyrightText: 2025 by Gaël Poupard
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Visually hide text while remaining accessible to screen readers (MIT License)
+ * https://codepen.io/ffoodd/pen/gwKeyq
+ */
+
+@charset "utf-8";
+
+%on-hover-or-focus {
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  position: static !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+
+  &.sr-only-focusable {
+    &:focus,
+    &:active {
+      @extend %on-hover-or-focus;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &:hover {
+    .sr-only-focusable {
+      @extend %on-hover-or-focus;
+    }
+  }
+
+  .octicon {
+    vertical-align: middle;
+  }
+}
+
+/*
+ * Skip link from Cayman (CC0)
+ * https://github.com/pages-themes/cayman
+ */
+.skip-link {
+  &:focus,
+  &:active {
+    @extend %on-hover-or-focus;
+
+    position: absolute !important;
+    top: 10px;
+    left: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+<!--
+  SPDX-FileCopyrightText: 2016-present Parker Moore and the minima contributors
+
+  SPDX-License-Identifier: MIT
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  {%- feed_meta -%}
+  {%- favicon -%}
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {%- unless page.jektex -%}
+    <link rel="stylesheet" href="{{ '/assets/katex.css?v=' | append: site.github.build_revision | relative_url }}">
+  {%- endunless -%}
+</head>
