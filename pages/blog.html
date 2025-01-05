@@ -1,0 +1,19 @@
+---
+title: Blog
+layout: home
+permalink: /blog/
+pagination:
+  enabled: true
+---
+<p>
+  This is where I put writings about technology, development tools, programming experience and commentary on open
+  source. Use the year links below to find older posts.
+</p>
+
+<ul class="post-years">
+  {%- for year in site.data.years -%}
+    <li>
+      <a href="{{ year | prepend: '/' | relative_url }}">{{ year }}</a>
+    </li>
+  {%- endfor -%}
+</ul>

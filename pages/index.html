@@ -1,0 +1,44 @@
+---
+permalink: /
+layout: default
+---
+<section>
+  <h1 class="post-title">Welcome</h1>
+  <p>
+    I'm Samuel. A first year Chinese American student wanting to be a video game developer and interested in open
+    source. Currently, I am working on a computer science degree.
+    <a href="{{ '/about/' | relative_url }}">See the about page to learn more</a>.
+  </p>
+</section>
+
+<section>
+  <h2 class="post-list-heading">Posts</h2>
+  <ul class="post-list">
+    {%- for post in site.posts limit: 3 -%}
+      <li>
+        <span class="post-meta">
+          {{- post.date | date_to_long_string: 'ordinal', 'US' }}
+          | Reading time: ~{{ post.content | reading_time | pluralize: 'minute' -}}
+        </span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {{ post.excerpt }}
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <h2>GitHub Projects</h2>
+  {%- assign active_repos = site.github.public_repositories | where: 'archived', 'false' -%}
+  {%- assign repos = active_repos | where: 'has_pages', 'true' -%}
+  <ul>
+    {%- for repo in repos -%}
+      <li>
+        <a href="{{ repo.homepage }}">{{ repo.name | escape }}</a> — <a href="{{ repo.html_url }}">Repository</a>
+        <p>{{ repo.description | escape }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>

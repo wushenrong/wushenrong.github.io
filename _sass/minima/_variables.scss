@@ -1,0 +1,43 @@
+/*
+ * SPDX-FileCopyrightText: 2016-present Parker Moore and the minima contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+// Define defaults for each variable.
+$base-font-family: system-ui, "Segoe UI", Roboto, Arimo, Ubuntu, "Noto Sans",
+  "Liberation Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$code-font-family: ui-monospace, "SF Mono", Menlo, "Cascadia Code", Consolas,
+  "Roboto Mono", Cousine, "Ubuntu Mono", "Noto Sans Mono", "Liberation Mono",
+  "Courier New", monospace;
+$base-font-size: 16px;
+$base-font-weight: normal;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+$spacing-unit: 30px;
+$table-text-align: left;
+
+// Width of the content area
+$content-width: 800px;
+$on-medium: 600px;
+$on-large: 800px;
+
+// Use media queries like this:
+// @include media-query($on-medium) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $ratio * 1rem;
+}

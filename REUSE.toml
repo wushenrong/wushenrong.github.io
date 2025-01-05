@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: MIT-0
+
+version = 1
+
+[[annotations]]
+SPDX-FileCopyrightText  = "2025 Samuel Wu"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+path                    = ["collections/**", "favicon.png", "pages/**"]
+
+[[annotations]]
+SPDX-FileCopyrightText  = "2013-2020 Khan Academy and other contributors"
+SPDX-License-Identifier = "MIT"
+path                    = ["assets/fonts/KaTeX_*"]
+
+[[annotations]]
+SPDX-FileCopyrightText  = "2016-present Parker Moore and the minima contributors"
+SPDX-License-Identifier = "MIT"
+path                    = ["_layouts/**", "pages/404.html"]
+
+[[annotations]]
+SPDX-FileCopyrightText = "2025 Samuel Wu"
+SPDX-License-Identifier = "MIT-0"
+path = [
+  ".frontmatter/**",
+  ".postcssrc.json",
+  ".ruby-version",
+  ".vscode/**",
+  ".well-known/**",
+  "Gemfile.lock",
+  "README.md",
+  "frontmatter.json",
+  "package*.json",
+]

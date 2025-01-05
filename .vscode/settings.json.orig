@@ -1,0 +1,8 @@
+{
+  "cSpell.customDictionaries": {
+    "ltex-words": {
+      "name": "ltex-words",
+      "path": "${workspaceFolder}/.vscode/ltex.dictionary.en-US.txt"
+    }
+  }
+}

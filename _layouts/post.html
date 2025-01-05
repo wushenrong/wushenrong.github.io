@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{- page.date | date_to_long_string: 'ordinal', 'US' -}}
+      </time>
+      {%- if page.last_modified_at %}
+        •
+        {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          Last Modified: {{ mdate | date_to_long_string: 'ordinal', 'US' -}}
+        </time>
+      {%- endif %}
+      <span itemprop="timeRequired">• Reading time: ~{{ content | reading_time | pluralize: 'minute' }}</span>
+    </p>
+    <p itemprop="description">{{ page.description | escape }}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">{%- include anchor_headings.liquid html=content -%}</div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden>Link to this article</a>
+</article>
+
+{%- if site.related_posts.size >= 8 -%}
+  <!-- Related Posts (MIT License) https://github.com/poole/lanyon -->
+  <aside class="post-related">
+    <h2 class="post-list-heading">Related Posts</h2>
+    <ul class="post-list">
+      {%- for post in site.related_posts offset: 1 limit: 3 -%}
+        <li>
+          <span class="post-meta">
+            {{- post.date | date_to_long_string: 'ordinal', 'US' }}
+            | Reading time: ~{{ post.content | reading_time | pluralize: 'minute' -}}
+          </span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          <p>{{ post.description | escape }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </aside>
+{%- endif -%}

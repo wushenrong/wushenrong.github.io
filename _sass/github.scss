@@ -1,0 +1,109 @@
+/*
+ * SPDX-FileCopyrightText: 2024 GitHub Inc.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+@charset "utf-8";
+
+:root {
+  --github-border-color: #d1d9e0;
+
+  --github-note-border-color: #0969da;
+  --github-tip-border-color: #1a7f37;
+  --github-important-border-color: #8250df;
+  --github-warning-border-color: #9a6700;
+  --github-caution-border-color: #cf222e;
+
+  --github-note-text-color: var(--github-note-border-color);
+  --github-tip-text-color: var(--github-tip-border-color);
+  --github-important-text-color: var(--github-important-border-color);
+  --github-warning-text-color: var(--github-warning-border-color);
+  --github-caution-text-color: var(--github-caution-border-color);
+
+  @media (prefers-color-scheme: dark) {
+    --github-border-color: #3d444d;
+
+    --github-note-border-color: #1f6feb;
+    --github-tip-border-color: #238636;
+    --github-important-border-color: #8957e5;
+    --github-warning-border-color: #9e6a03;
+    --github-caution-border-color: #da3633;
+
+    --github-note-text-color: #4493f8;
+    --github-tip-text-color: #3fb950;
+    --github-important-text-color: #ab7df8;
+    --github-warning-text-color: #d29922;
+    --github-caution-text-color: #f85149;
+  }
+}
+
+// GitHub Alerts and Octicons
+.octicon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  fill: currentColor;
+  overflow: visible;
+}
+
+.markdown-alert {
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: inherit;
+  border-left: 4px solid var(--github-border-color);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  .markdown-alert-title {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+
+    .octicon {
+      margin-right: 8px;
+    }
+  }
+
+  &.markdown-alert-note {
+    border-left-color: var(--github-note-border-color);
+
+    .markdown-alert-title {
+      color: var(--github-note-text-color);
+    }
+  }
+
+  &.markdown-alert-tip {
+    border-left-color: var(--github-tip-border-color);
+
+    .markdown-alert-title {
+      color: var(--github-tip-text-color);
+    }
+  }
+
+  &.markdown-alert-important {
+    border-left-color: var(--github-important-border-color);
+
+    .markdown-alert-title {
+      color: var(--github-important-text-color);
+    }
+  }
+
+  &.markdown-alert-warning {
+    border-left-color: var(--github-warning-border-color);
+
+    .markdown-alert-title {
+      color: var(--github-warning-text-color);
+    }
+  }
+
+  &.markdown-alert-caution {
+    border-left-color: var(--github-caution-border-color);
+
+    .markdown-alert-title {
+      color: var(--github-caution-text-color);
+    }
+  }
+}

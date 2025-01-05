@@ -1,0 +1,44 @@
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q.container { margin: 10px auto; max-width: 600px; text-align: center; } h1 { margin: 30px 0; font-size: 4em; line-height: 1; letter-spacing: -1px; }\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ content }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ page.description | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ page.title | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ paginator.page }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ post.date | date_to_long_string: 'ordinal', 'US' }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ post.description | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ post.excerpt }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ post.title | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ repo.description | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ repo.name | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ site.author.email }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ site.author.name | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ site.description | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ site.time | date_to_string: 'ordinal', 'US' }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ site.title | escape }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{ year }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q{{- post.date | date_to_long_string: 'ordinal', 'US' }} | Reading time: ~{{ post.content | reading_time | pluralize: 'minute' -}}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q• Reading time: ~{{ content | reading_time | pluralize: 'minute' }}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QLast Modified: {{ mdate | date_to_long_string: 'ordinal', 'US' -}}\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QMy {{ social.platform_name }} Account\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QPosts from {{ page.date | date: '%Y' }}\\E$"}
+{"rule":"FILE_EXTENSIONS_CASE","sentence":"^\\Q{%- include anchor_headings.liquid html=content -%}\\E$"}
+{"rule":"GITHUB","sentence":"^\\Q{%- assign active_repos = site.github.public_repositories | where: 'archived', 'false' -%} {%- assign repos = active_repos | where: 'has_pages', 'true' -%}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ page.description | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ page.title | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ paginator.page }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ post.date | date_to_long_string: 'ordinal', 'US' }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ post.description | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ post.excerpt }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ post.title | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ repo.description | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ site.description | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ site.time | date_to_string: 'ordinal', 'US' }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{ site.title | escape }}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{- page.date | date_to_long_string: 'ordinal', 'US' -}}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{{- post.date | date_to_long_string: 'ordinal', 'US' }} | Reading time: ~{{ post.content | reading_time | pluralize: 'minute' -}}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{%- assign page_paths = site.header_pages -%} {%- for path in page_paths -%} {%- assign my_page = site.pages | where: 'path', path | first -%} {%- if my_page.title -%}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{%- for post in page.posts -%}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{%- for post in paginator.posts -%}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q{%- for post in site.posts limit: 3 -%}\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\QMy {{ social.platform_name }} Account\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\QPosts from {{ page.date | date: '%Y' }}\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qon\\E$"}
