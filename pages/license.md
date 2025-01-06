@@ -16,7 +16,8 @@ for commercial purposes, provided that you:
 - list any modifications you have made to the content
 - license the modifications under the same or a compatible CC BY-SA 4.0 license
 - do not use any digital right management tools to protect the content
-- more information can be found at the [license code][cc-by-sa-4.0-legal]
+
+More information can be found at the [license code][cc-by-sa-4.0-legal]
 
 [cc-by-sa-4.0-legal]: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
@@ -37,12 +38,12 @@ the repository this site is hosted on and using the
 [REUSE tool](https://reuse.software).
 
 ```bash
-# Clone the repository
+# Clone the site's repository
 git clone {{ site.github.clone_url }}
-# Change directory into the cloned repository
+# Change directory into the site's repository
 cd {{ site.github.project_title }}
 # Create a bill of materials, make sure you have installed reuse
-# either by using pipx or your package manager
+# Either by using pipx or your package manager
 reuse spdx
 ```
 
@@ -58,30 +59,36 @@ This site is built with [Jekyll](https://jekyllrb.com), a static site generator
 that helps you to create your own website, and it is the default for
 [GitHub Pages](https://pages.github.com). Jekyll licensed is under the
 [MIT License]. For additional plugins and [Ruby](https://ruby-lang.org)
-dependencies, see `Gemfile` and `_plugins` at
+dependencies, see the `Gemfile` and the `_plugins` folder at
 <{{ site.github.repository_url }}>.
 <!-- LTeX: enabled=true -->
 
-[MIT License]: https://mit-license.org
+[MIT License]: https://opensource.org/license/mit
 
 ## Theme
 
-This site uses a modified version of the minima theme.
-[Minima](https://github.com/jekyll/minima) is a one-size-fits-all Jekyll theme
-for writers, and it is licensed under the [MIT License].
+This site uses a modified version of the minima theme. [Minima] is a
+one-size-fits-all Jekyll theme for writers, and it is licensed under the
+[MIT License].
+
+[Minima]: https://github.com/jekyll/minima
 
 ## Math Support
 
-This site includes CSS and fonts from [KaTeX](https://github.com/KaTeX/KaTeX) to
-render LaTeX math expressions, which it is under the [MIT License].
+This site includes CSS and fonts from [KaTeX](https://katex.org) to render LaTeX
+math expressions, which it is under the [MIT License].
 
 ## Icons
 
 Icons on this site is from [Font Awesome](https://fontawesome.com) under the
-[Font Awesome Free License] and [Octicons] under the [MIT License].
+[Font Awesome Free License][fafl] which is composed of the [MIT License] for the
+code, the [Open Font License][ofl] for fonts, and the [CC BY 4.0] for icons. And
+[Octicons] under the [MIT License].
 
-[Font Awesome Free License]: https://fontawesome.com/license/free
-[Octicons]:                  https://github.com/primer/octicons
+[fafl]:      https://fontawesome.com/license/free
+[ofl]:       https://openfontlicense.org/open-font-license-official-text/
+[CC BY 4.0]: https://creativecommons.org/licenses/by/4.0/
+[Octicons]:  https://primer.style/foundations/icons/
 
 ## Layout and Styles
 
