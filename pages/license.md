@@ -1,7 +1,6 @@
 ---
 title: License
 permalink: /license/
-jektex: false
 ---
 
 Content on this site is licensed under the [CC BY-SA 4.0] license. This
@@ -17,7 +16,7 @@ for commercial purposes, provided that you:
 - license the modifications under the same or a compatible CC BY-SA 4.0 license
 - do not use any digital right management tools to protect the content
 
-More information can be found at the [license code][cc-by-sa-4.0-legal]
+More information can be found in the [license code][cc-by-sa-4.0-legal].
 
 [cc-by-sa-4.0-legal]: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
@@ -75,8 +74,8 @@ one-size-fits-all Jekyll theme for writers, and it is licensed under the
 
 ## Math Support
 
-This site includes CSS and fonts from [KaTeX](https://katex.org) to render LaTeX
-math expressions, which it is under the [MIT License].
+This site includes CSS and fonts from [$$\KaTeX$$](https://katex.org) to render
+$$\LaTeX$$ math expressions, which it is under the [MIT License].
 
 ## Icons
 

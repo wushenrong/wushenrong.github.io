@@ -26,6 +26,7 @@ author:
   email: twopizza9621536@gmail.com
   url: https://wushenrong.github.io
 
+# Page defaults and links
 permalink: pretty
 collections_dir: collections
 
@@ -53,7 +54,6 @@ jekyll-archives:
 header_pages:
   - pages/about.md
   - pages/contact.md
-  - pages/license.md
 
 # KaTeX support
 jektex:
