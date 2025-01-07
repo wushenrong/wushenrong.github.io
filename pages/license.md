@@ -31,8 +31,7 @@ license that the content is under on that page.
 
 The source code is under various licenses and have SPDX expressions to mark
 what licenses the code is under. A bill of materials can be created by cloning
-the repository this site is hosted on and using the
-[REUSE tool](https://reuse.software).
+the repository this site is hosted on and using the [REUSE tool](https://reuse.software).
 
 ```bash
 # Clone the site's repository
@@ -53,9 +52,8 @@ site.
 
 <!-- LTeX: enabled=false -->
 This site is built with [Jekyll](https://jekyllrb.com), a static site generator
-that helps you to create your own website, and it is the default for
-[GitHub Pages](https://pages.github.com). Jekyll licensed is under the
-[MIT License]. For additional plugins and [Ruby](https://ruby-lang.org)
+that helps you to create your own website, and it is the default for [GitHub Pages](https://pages.github.com).
+Jekyll licensed is under the [MIT License]. For additional plugins and [Ruby](https://ruby-lang.org)
 dependencies, see the `Gemfile` and the `_plugins` folder at
 <{{ site.github.repository_url }}>.
 <!-- LTeX: enabled=true -->
