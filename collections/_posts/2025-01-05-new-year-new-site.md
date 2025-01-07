@@ -8,14 +8,13 @@ description: >-
 After a detour of creating a [portfolio site](/CSCE190) for my CSCE190 class,
 and now I have free time over the break, it is a great time to rebuild this site
 from scratch as my last attempts making a mostly accessible site with dark mode
-didn't go well. Not the fact that the theme I was modifying, [Lanyon], has a
-sidebar that is not very accessible without JavaScript. Nor modifications to the
-theme are simple. So keeping in mind of the "[Keep it simple, silly][KISS]"
+didn't go well. Not the fact that the theme I was modifying, [Lanyon](https://github.com/poole/lanyon),
+has a sidebar that is not very accessible without JavaScript. Nor modifications
+to the theme are simple. So keeping in mind of the "[Keep it simple, silly][KISS]"
 principle, having a minimal design, and no JavaScript on the client, let's see
 how I can make a better site than the last one.
 
-[Lanyon]: https://github.com/poole/lanyon
-[KISS]:   https://en.wikipedia.org/wiki/KISS_principle
+[KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
 ## Choosing a Site Generator
 
@@ -25,12 +24,10 @@ choice for me as it was the previous generator I used, and it is the default for
 is outdated. Compared to [Hugo](https://gohugo.io), yes I need to install
 [Ruby](https://www.ruby-lang.org), plugins for features that are built in to
 Hugo and has a short build time. However, there are benefits to use Jekyll than
-Hugo. The [Liquid] templates that Jekyll uses is easier to use than Go
-templates, as I don't have to use postfix operations for tags and Liquid, as I
-currently learned, can also suppress the emissions of whitespace by adding
-dashes in the Liquid variables and tags like so:
-
-[Liquid]: https://shopify.github.io/liquid/
+Hugo. The [Liquid](https://shopify.github.io/liquid/) templates that Jekyll uses
+is easier to use than Go templates, as I don't have to use postfix operations
+for tags and Liquid, as I currently learned, can also suppress the emissions of
+whitespace by adding dashes in the Liquid variables and tags like so:
 
 ```liquid
 {%- raw -%}
@@ -71,7 +68,7 @@ time to clone the theme right into the site.
 The biggest modification I need to make is changing the colors, so the site is
 compliant with Web Content Accessibility Guidelines (WCAG). These set of
 guidelines lets designers create sites with disabled people in mind. The hardest
-and what designers might strive for is [WCAG on enhanced contrast][wcag-1.4.6].
+and what designers might strive for is [WCAG on enhanced contrast](https://www.w3.org/TR/WCAG22/#contrast-enhanced).
 It requires body text to at least to have a contrast ratio of 7 to 1 against the
 background. However, link to body text needs a contrast of at least 3:1, making
 it difficult to find a balance between background, body and link colors. After
@@ -79,7 +76,6 @@ considerations and to keep it simple, I use Minima's original colors and try to
 follow [WCAG on contrast][wcag-1.4.3] which requires a text against background
 contrast of at least 4.5:1, still it's difficult to satisfy.
 
-[wcag-1.4.6]: https://www.w3.org/TR/WCAG22/#contrast-enhanced
 [wcag-1.4.3]: https://www.w3.org/TR/WCAG22/#contrast-minimum
 
 *[WCAG]: Web Content Accessibility Guidelines
@@ -100,11 +96,9 @@ $$a^{2} + b^{2} = c^{2}$$
 
 $$a^{2} + b^{2} = c^{2}$$
 
-I also added GitHub alerts to the site by using a [Jekyll plugin][admonitions]
+I also added GitHub alerts to the site by using a [Jekyll plugin](https://github.com/Helveg/jekyll-gfm-admonitions)
 as notice boxes and colors from GitHub, which conforms to
 [WCAG on color contrast][wcag-1.4.3].
-
-[admonitions]: https://github.com/Helveg/jekyll-gfm-admonitions
 
 ```markdown
 > [!NOTE]
