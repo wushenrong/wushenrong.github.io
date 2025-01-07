@@ -17,11 +17,11 @@ notes, and more.
 
 ## Why Markdown
 
-Why use Markdown and not [AsciiDoc](https://asciidoc.org/),
-[Typst](https://typst.app), [Textile](https://textile-lang.com), or other
-[lightweight markup languages][markup-langs]. Well there are three reasons:
+Why use Markdown and not [AsciiDoc](https://asciidoc.org/), [Typst](https://typst.app),
+[Textile](https://textile-lang.com), or other [lightweight markup languages][light-markup-langs].
+Well there are three reasons:
 
-[markup-langs]: https://en.wikipedia.org/wiki/Lightweight_markup_language
+[light-markup-langs]: https://en.wikipedia.org/wiki/Lightweight_markup_language
 
 -   Simplicity:
 
