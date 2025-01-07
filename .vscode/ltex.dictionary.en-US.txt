@@ -1,6 +1,7 @@
 %heading%
 %Y
 anchorAttrs
+AsciiDoc
 beforeHeading
 chezmoi
 Consent-O-Matic
@@ -50,7 +51,10 @@ Ryzen
 scc
 seo
 Shēn
+Strikethrough
+toc
 tokei
+Typst
 url
 WCAG
 wushenrong
