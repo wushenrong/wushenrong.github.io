@@ -23,9 +23,6 @@ no-trailing-spaces:
 no-hard-tabs:
   spaces_per_tab: 4
 
-line-length:
-  strict: true
-
 no-duplicate-heading:
   siblings_only: true
 
