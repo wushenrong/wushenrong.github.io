@@ -28,14 +28,14 @@ the ID is `29239`.
 Currently, I have an HP Envy x360 2-in-1 Laptop 14-fa0xxx with the following
 configuration:
 
-| Specifications   | Configuration                 |
-| ---------------- | ----------------------------- |
-| CPU              | AMD Ryzen 7 8840HS @ 3.30 GHz |
-| GPU              | Radeon 780M Graphics          |
-| RAM              | 16 GB                         |
-| Storage          | 1TB Samsung NVMe SSD          |
-| Resolution       | 1920x1200 @ 60Hz              |
-| Operating System | Windows 11                    |
+Specifications   | Configuration
+---------------- | -----------------------------
+CPU              | AMD Ryzen 7 8840HS @ 3.30 GHz
+GPU              | Radeon 780M Graphics
+RAM              | 16 GB
+Storage          | 1TB Samsung NVMe SSD
+Resolution       | 1920x1200 @ 60Hz
+Operating System | Windows 11
 
 ## Workspace Setup
 

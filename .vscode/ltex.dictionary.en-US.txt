@@ -39,6 +39,7 @@ nano
 Octicon
 Octicons
 paginator
+Pandoc
 pipx
 postcssrc
 posthtml
@@ -48,6 +49,7 @@ Róng
 rubocop
 RubyGems
 Ryzen
+Santilli
 scc
 seo
 Shēn
