@@ -6,6 +6,7 @@
 # based on https://cirosantilli.com/markdown-style-guide/
 # and https://google.github.io/styleguide/docguide/style.html
 
+# Set all rules to their defaults
 default: true
 
 heading-style:
@@ -59,4 +60,4 @@ link-image-style:
   url_inline: false
 
 table-pipe-style:
-  style: leading_and_trailing
+  style: no_leading_or_trailing
