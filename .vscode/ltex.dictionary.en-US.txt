@@ -30,6 +30,7 @@ Krita
 Lanyon
 liblapacke
 libopenblas
+markdownlint
 maxHeader
 mdate
 minHeader
