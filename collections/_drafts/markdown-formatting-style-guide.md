@@ -79,9 +79,8 @@ can parse the document, this where the Markdown Formatting Style Guide comes in.
 
 ## Considerations
 
-This document will mainly consider [GitHub Flavor Markdown](https://github.github.com/gfm/)
-(GFM) as the default extension of Markdown for usage and [kramdown] as a
-secondary extension.
+This document will mainly use and consider [GitHub Flavor Markdown](https://github.github.com/gfm/)
+(GFM) as the main Markdown flavor and [kramdown] as a secondary flavor.
 
 [kramdown]: https://kramdown.gettalong.org/
 
@@ -90,8 +89,6 @@ secondary extension.
 Rational: Most flavors of Markdown and editors supports GFM either as a native
 feature or as an extension due to the popularity of GitHub. Features from
 kramdown allow customizations that are useful for authoring and has GFM support.
-
-Enforcement: Use GFM and editors that support it.
 
 <!-- LTeX: enabled=false -->
 - [kramdown] with [`kramdown-parser-gfm`](https://github.com/kramdown/parser-gfm).
@@ -113,9 +110,73 @@ consider rules from [Santilli's](https://doi.org/10.5281/zenodo.3464189) and
 
 [google-style-guide]: https://google.github.io/styleguide/docguide/style.html
 
-Enforcement: Use the following style linter and formatter to enforce this style
-guide.
+Enforcement: Use the following style linters and formatters to enforce this
+style guide.
 
-- [EditorConfig](https://editorconfig.org/)
-- [markdownlint](https://github.com/DavidAnson/markdownlint)
-- And reading both the source and rendered Markdown document
+-   [EditorConfig](https://editorconfig.org/)
+
+-   Choose one of the following:
+
+    -   [markdownlint](https://github.com/DavidAnson/markdownlint)
+
+    -   [remark](https://remark.js.org) with plugins for linting, GFM and
+        frontmatter support
+
+-   And reading both the source and rendered Markdown document.
+
+This guide will use markdownlint as it's the most popular linter for Markdown
+with plugin support for many editors and has an easy configuration.
+
+## Source document
+
+### File extension
+
+Use `.md` for Markdown documents, this includes very important documents listed
+in [File name](#file-name).
+
+Rational: `.md` is popular and shorter than `.markdown`.
+
+### File name
+
+Use alphanumeric ASCII characters with hyphens `-` or underscores `_` and be
+either in the following formats:
+
+-   `SCREAMING_SNAKE_CASE` for important documentation in source control:
+    - `README.md`
+    - `CHANGELOG.md`
+    - `CONTRIBUTING.md`
+    - `CODE_OF_CONDUCT.md`
+    - etc
+
+    Rational: Important documents like project information, important changes,
+    or contributing guidelines can be quickly located by looking for or sorted
+    by uppercase letters first.
+
+-   Or `kebab-case` for publishing on the web and all other Markdown documents:
+
+    ```plaintext
+    file-name.md
+    01-01-2025-file-name-with-date.md
+    ```
+
+    Rational: Hyphens are the most popular word separators in URLs and helps
+    search engines find keywords[^1].
+
+[^1]: <https://developers.google.com/search/docs/crawling-indexing/url-structure>
+
+### File encoding
+
+Use UTF-8 and Unicode characters instead of HTML character reference.
+
+Rational: Most, if not all, pages on the web are encoded in UTF-8 and Unicode
+character are much more readable in the source document.
+
+### Character line limit
+
+## Whitespace
+
+### Line breaks
+
+## Frontmatter
+
+## Headings
