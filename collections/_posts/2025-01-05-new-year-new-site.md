@@ -16,7 +16,7 @@ how I can make a better site than the last one.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
-## Choosing a Site Generator
+## Choosing a site generator
 
 For getting a simple site up quickly, [Jekyll](https://jekyllrb.com) is the
 choice for me as it was the previous generator I used, and it is the default for
