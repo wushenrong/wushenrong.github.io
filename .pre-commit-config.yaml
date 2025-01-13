@@ -27,7 +27,7 @@ repos:
       - id: markdownlint-cli2
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.22.1
+    rev: v8.23.0
     hooks:
       - id: gitleaks
 
@@ -37,7 +37,7 @@ repos:
       - id: reuse
 
   - repo: https://github.com/rubocop/rubocop
-    rev: 47735efc2b410578a196fd2758da87d01802c655 # frozen: v1.57.2
+    rev: 77027fb4aec8bb457e7f4238ecf4992e42cc4f4f  # frozen: v1.70.0
     hooks:
       - id: rubocop
         additional_dependencies:
