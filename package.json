@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "^1.6.3",
+    "@shopify/prettier-plugin-liquid": "^1.7.2",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
     "htmlnano": "^2.1.1",
