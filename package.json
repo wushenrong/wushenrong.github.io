@@ -10,7 +10,7 @@
     "posthtml": "^0.16.6",
     "posthtml-cli": "^0.10.0",
     "prettier": "3.4.2",
-    "terser": "^5.37.0"
+    "terser": "^5.39.0"
   },
   "name": "wushenrong.github.io",
   "private": true
