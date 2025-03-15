@@ -26,8 +26,9 @@ no-hard-tabs:
   spaces_per_tab: 4
 
 line-length:
-  heading_line_length: 120
   code_block_line_length: 120
+  heading_line_length: 120
+  stern: true
   tables: false
 
 no-duplicate-heading:

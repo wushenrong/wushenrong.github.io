@@ -7,6 +7,7 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: [main]
+    paths: [collections/_posts/**]
   workflow_dispatch:
 
 permissions:
