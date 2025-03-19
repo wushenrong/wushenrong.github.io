@@ -71,6 +71,7 @@ liquid:
 
 # Exclude files
 exclude:
+  - biome.json
   - frontmatter.json
   - LICENSE
   - LICENSES
