@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@shopify/prettier-plugin-liquid": "^1.6.3",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
     "htmlnano": "^2.1.1",
