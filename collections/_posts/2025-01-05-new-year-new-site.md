@@ -8,11 +8,12 @@ description: >-
 After a detour of creating a [portfolio site](/CSCE190) for my CSCE190 class,
 and now I have free time over the break, it is a great time to rebuild this site
 from scratch as my last attempts making a mostly accessible site with dark mode
-didn't go well. Not the fact that the theme I was modifying, [Lanyon](https://github.com/poole/lanyon),
-has a sidebar that is not very accessible without JavaScript. Nor modifications
-to the theme are simple. So keeping in mind of the "[Keep it simple, silly][KISS]"
-principle, having a minimal design, and no JavaScript on the client, let's see
-how I can make a better site than the last one.
+didn't go well. Not the fact that the theme I was modifying,
+[Lanyon](https://github.com/poole/lanyon), has a sidebar that is not very
+accessible without JavaScript. Nor modifications to the theme are simple. So
+keeping in mind of the "[Keep it simple, silly][KISS]" principle, having a
+minimal design, and no JavaScript on the client, let's see how I can make a
+better site than the last one.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
@@ -68,8 +69,9 @@ time to clone the theme right into the site.
 The biggest modification I need to make is changing the colors, so the site is
 compliant with Web Content Accessibility Guidelines (WCAG). These set of
 guidelines lets designers create sites with disabled people in mind. The hardest
-and what designers might strive for is [WCAG on enhanced contrast](https://www.w3.org/TR/WCAG22/#contrast-enhanced).
-It requires body text to at least to have a contrast ratio of 7 to 1 against the
+and what designers might strive for is
+[WCAG on enhanced contrast](https://www.w3.org/TR/WCAG22/#contrast-enhanced). It
+requires body text to at least to have a contrast ratio of 7 to 1 against the
 background. However, link to body text needs a contrast of at least 3:1, making
 it difficult to find a balance between background, body and link colors. After
 considerations and to keep it simple, I use Minima's original colors and try to
@@ -96,8 +98,9 @@ $$a^{2} + b^{2} = c^{2}$$
 
 $$a^{2} + b^{2} = c^{2}$$
 
-I also added GitHub alerts to the site by using a [Jekyll plugin](https://github.com/Helveg/jekyll-gfm-admonitions)
-as notice boxes and colors from GitHub, which conforms to
+I also added GitHub alerts to the site by using a
+[Jekyll plugin](https://github.com/Helveg/jekyll-gfm-admonitions) as notice
+boxes and colors from GitHub, which conforms to
 [WCAG on color contrast][wcag-1.4.3].
 
 ```markdown
@@ -118,8 +121,8 @@ as notice boxes and colors from GitHub, which conforms to
 
 <!-- LTeX: enabled=false -->
 Lastly along the way I added more Jekyll plugins, configurations for linters,
-formatters, minifiers, [pre-commit](https://pre-commit.com/), and GitHub
-Actions to build and host the site. And it's much cleaner and nicer than before.
-Any modifications and source code of this site can be seen at
+formatters, minifiers, [pre-commit](https://pre-commit.com/), and GitHub Actions
+to build and host the site. And it's much cleaner and nicer than before. Any
+modifications and source code of this site can be seen at
 <{{ site.github.repository_url }}>.
 <!-- LTex: enabled=true -->
