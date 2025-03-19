@@ -1,5 +1,6 @@
 ---
 title: Lightweight VSCode Setup For Beginners
+date: 2025-02-01
 ---
 
 Visual Studio Code (VS Code) is one of the popular most text editor due to its

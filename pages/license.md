@@ -3,9 +3,10 @@ title: License
 permalink: /license/
 ---
 
-Content on this site is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
-license. This means that you can use, copy, share, and modify the content on
-this site even for commercial purposes, provided that you:
+Content on this site is licensed under the
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) license. This
+means that you can use, copy, share, and modify the content on this site even
+for commercial purposes, provided that you:
 
 - credit the content and its creators by providing a link or a copy if possible
 - when requested, remove the credit of creators
@@ -14,7 +15,8 @@ this site even for commercial purposes, provided that you:
 - license the modifications under the same or a compatible CC BY-SA 4.0 license
 - do not use any digital right management tools to protect the content
 
-More information can be found in the [license code](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+More information can be found in the
+[license code](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Content like code snippets, content external to this site, or other pages under
 this site that are not in this site's repository might be under a different
@@ -29,7 +31,8 @@ license that the content is under on that page.
 
 The source code is under various licenses and have SPDX expressions to mark
 what licenses the code is under. A bill of materials can be created by cloning
-the repository this site is hosted on and using the [REUSE tool](https://reuse.software).
+the repository this site is hosted on and using the
+[REUSE tool](https://reuse.software).
 
 ```bash
 # Clone the site's repository
@@ -50,8 +53,9 @@ site.
 
 <!-- LTeX: enabled=false -->
 This site is built with [Jekyll](https://jekyllrb.com), a static site generator
-that helps you to create your own website, and it is the default for [GitHub Pages](https://pages.github.com).
-Jekyll licensed is under the [MIT License]. For additional plugins and [Ruby](https://ruby-lang.org)
+that helps you to create your own website, and it is the default for
+[GitHub Pages](https://pages.github.com). Jekyll licensed is under the
+[MIT License]. For additional plugins and [Ruby](https://ruby-lang.org)
 dependencies, see the `Gemfile` and the `_plugins` folder at
 <{{ site.github.repository_url }}>.
 <!-- LTeX: enabled=true -->
@@ -60,9 +64,9 @@ dependencies, see the `Gemfile` and the `_plugins` folder at
 
 ## Theme
 
-This site uses a modified version of the minima theme. [Minima](https://github.com/jekyll/minima)
-is a one-size-fits-all Jekyll theme for writers, and it is licensed under the
-[MIT License].
+This site uses a modified version of the minima theme.
+[Minima](https://github.com/jekyll/minima) is a one-size-fits-all Jekyll theme
+for writers, and it is licensed under the [MIT License].
 
 ## Math Support
 
@@ -73,8 +77,9 @@ $$\LaTeX$$ math expressions, which it is under the [MIT License].
 
 Icons on this site is from [Font Awesome](https://fontawesome.com) under the
 [Font Awesome Free License][fafl] which is composed of the [MIT License] for the
-code, the [Open Font License][ofl] for fonts, and the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-for icons. And [Octicons] under the [MIT License].
+code, the [Open Font License][ofl] for fonts, and the
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for icons. And
+[Octicons] under the [MIT License].
 
 [fafl]:      https://fontawesome.com/license/free
 [ofl]:       https://openfontlicense.org/open-font-license-official-text/
@@ -83,11 +88,14 @@ for icons. And [Octicons] under the [MIT License].
 ## Layout and Styles
 
 Some layout inspiration are from [Tim Coombs](https://blog.slowb.ro/). Anchor
-links are from [Jekyll Anchor Headings](https://github.com/allejo/jekyll-anchor-headings)
-under the [MIT License].
+links are from
+[Jekyll Anchor Headings](https://github.com/allejo/jekyll-anchor-headings) under
+the [MIT License].
 
-Some [screen reader only styles][sr-only] are from [Kitty Giraudel](https://kittygiraudel.com/snippets/sr-only-class/)
-is licensed under the [MIT License]. Other styles are from the [Poole theme](https://github.com/poole/lanyon)
-under the [MIT License], and [Octicons] under the [MIT License].
+Some [screen reader only styles][sr-only] are from
+[Kitty Giraudel](https://kittygiraudel.com/snippets/sr-only-class/) is licensed
+under the [MIT License]. Other styles are from the
+[Poole theme](https://github.com/poole/lanyon) under the [MIT License], and
+[Octicons] under the [MIT License].
 
 [sr-only]: https://codepen.io/ffoodd/pen/gwKeyq

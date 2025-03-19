@@ -1,6 +1,7 @@
 %heading%
 %Y
 anchorAttrs
+AsciiDoc
 beforeHeading
 chezmoi
 Consent-O-Matic
@@ -15,6 +16,7 @@ endunless
 eza
 fastfetch
 fd
+Frontmatter
 frontmatter
 fzf
 Giraudel
@@ -29,6 +31,7 @@ Krita
 Lanyon
 liblapacke
 libopenblas
+markdownlint
 maxHeader
 mdate
 minHeader
@@ -38,6 +41,7 @@ nano
 Octicon
 Octicons
 paginator
+Pandoc
 pipx
 postcssrc
 posthtml
@@ -47,10 +51,14 @@ Róng
 rubocop
 RubyGems
 Ryzen
+Santilli
 scc
 seo
 Shēn
+Strikethrough
+toc
 tokei
+Typst
 url
 WCAG
 wushenrong
