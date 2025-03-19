@@ -5,16 +5,12 @@
 
 source "https://rubygems.org"
 
-# Base gems
-gem "base64", "~> 0.2.0"
-gem "csv", "~> 3.3", ">= 3.3.2"
-
 # Linter for local Jekyll plugins
 gem "rubocop", "~> 1.57", :require => false, :groups => [:development]
 gem "rubocop-jekyll", "~> 0.14", :groups => [:development]
 
 # Jekyll and plugins
-gem "jekyll", "~> 4.3.4"
+gem "jekyll", "~> 4.4.1"
 
 gem "dotenv", "~> 3.1", ">= 3.1.7", :groups => [:development]
 gem "faraday-retry", "~> 2.2", ">= 2.2.1"

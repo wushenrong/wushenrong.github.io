@@ -6,6 +6,7 @@
 # based on https://cirosantilli.com/markdown-style-guide/
 # and https://google.github.io/styleguide/docguide/style.html
 
+# Set all rules to their defaults
 default: true
 
 heading-style:
@@ -25,8 +26,9 @@ no-hard-tabs:
   spaces_per_tab: 4
 
 line-length:
-  heading_line_length: 120
   code_block_line_length: 120
+  heading_line_length: 120
+  stern: true
   tables: false
 
 no-duplicate-heading:

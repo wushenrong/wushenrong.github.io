@@ -41,25 +41,39 @@ configuration:
 
 A list of what applications I use daily.
 
--   Browsers: Firefox, Microsoft Edge
+-   Web Browsers:
+    - [Firefox](https://firefox.com) (main)
+    - [Microsoft Edge](https://microsoftedge.com) (development)
+    - [Google Chrome](https://chrome.com) (development)
 
 -   Browser Extensions:
-    - Consent-O-Matic
-    - Dark Reader
-    - Indie Wiki Buddy
-    - SponsorBlock
-    - uBlock Origin
+    - [Consent-O-Matic](https://consentomatic.au.dk)
+    - [Dark Reader](https://darkreader.org)
+    - [Indie Wiki Buddy](https://getindie.wiki)
+    - [SponsorBlock](https://sponsor.ajay.app)
+    - [uBlock Origin](https://ublockorigin.com)
 
--   Email Clients: Thunderbird, Outlook (online), Apple Mail (mobile)
+-   Email Clients:
+    - [Thunderbird](https://www.thunderbird.net) (desktop)
+    - [Outlook](https://outlook.com) (online)
+    - [Apple Mail](https://www.icloud.com/mail) (mobile)
 
--   Image Editors: Krita (raster), Inkscape (vector)
+-   Image Editors:
+    - [Krita](https://krita.org) (raster)
+    - [Inkscape](https://inkscape.org) (vector)
 
--   Code Editors: Visual Studio Code (graphical), micro (terminal),
-    nano (terminal)
+-   Code Editors:
+    - [Visual Studio Code](https://code.visualstudio.com) (graphical)
+    - [micro](https://micro-editor.github.io) (terminal)
+    - [nano](https://www.nano-editor.org) (terminal)
 
--   Terminals: Windows Terminal (Windows), Kitty Terminal (Linux)
+-   Terminals:
+    - [Windows Terminal](https://github.com/microsoft/terminal) (Windows)
+    - [Kitty Terminal](https://sw.kovidgoyal.net/kitty/) (Linux)
 
--   Shells: PowerShell (Windows), Z shell (Linux)
+-   Shells:
+    - [PowerShell](https://github.com/PowerShell/PowerShell) (Windows)
+    - [Z shell](https://zsh.sourceforge.io/) (Linux)
 
 -   CLI Tools:
     -   From Rust:

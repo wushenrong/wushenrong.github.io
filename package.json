@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "^1.6.3",
+    "@biomejs/biome": "1.9.4",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
     "htmlnano": "^2.1.1",
@@ -9,7 +9,6 @@
     "postcss-cli": "^11.0.0",
     "posthtml": "^0.16.6",
     "posthtml-cli": "^0.10.0",
-    "prettier": "3.4.2",
     "terser": "^5.37.0"
   },
   "name": "wushenrong.github.io",
