@@ -13,7 +13,7 @@ gem "rubocop-jekyll", "~> 0.14", :groups => [:development]
 gem "jekyll", "~> 4.4.1"
 
 gem "dotenv", "~> 3.1", ">= 3.1.7", :groups => [:development]
-gem "faraday-retry", "~> 2.2", ">= 2.2.1"
+gem "faraday-retry", "~> 2.3"
 
 gem "classifier-reborn", "~> 2.3"
 gem "numo-linalg", "~> 0.1"
