@@ -5,12 +5,11 @@
  */
 
 // Define defaults for each variable.
-$base-font-family: system-ui, "Segoe UI", Roboto, Arimo, Ubuntu, "Noto Sans",
-  "Liberation Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$code-font-family: ui-monospace, "SF Mono", Menlo, "Cascadia Code", Consolas,
-  "Roboto Mono", Cousine, "Ubuntu Mono", "Noto Sans Mono", "Liberation Mono",
-  "Courier New", monospace;
+$base-font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+  Cantarell, Noto Sans, sans-serif;
+$code-font-family: ui-monospace, SF Mono, Monaco, Droid Sans Mono,
+  Source Code Pro, Cascadia Code, Menlo, Consolas, DejaVu Sans Mono,
+  monospace;
 $base-font-size: 16px;
 $base-font-weight: normal;
 $small-font-size: $base-font-size * 0.875;
