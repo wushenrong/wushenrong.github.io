@@ -87,7 +87,7 @@ code, the [Open Font License][ofl] for fonts, and the
 
 ## Layout and Styles
 
-Some layout inspiration are from [Tim Coombs](https://blog.slowb.ro/). Anchor
+Some layout inspiration is from [Tim Coombs](https://blog.slowb.ro/). Anchor
 links are from
 [Jekyll Anchor Headings](https://github.com/allejo/jekyll-anchor-headings) under
 the [MIT License].
