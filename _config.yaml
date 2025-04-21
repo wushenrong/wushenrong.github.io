@@ -27,7 +27,7 @@ author:
   url: https://wushenrong.github.io
 
 # Page defaults and links
-permalink: pretty
+permalink: /:title/
 collections_dir: collections
 
 pagination:

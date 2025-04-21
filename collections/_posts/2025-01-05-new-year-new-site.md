@@ -1,5 +1,5 @@
 ---
-title: New Year New Site
+title: New Year, New Site
 description: >-
     How to create an accessible Jekyll site with the default Minima theme for
     the new year
