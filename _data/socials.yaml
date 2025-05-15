@@ -7,7 +7,7 @@
   user_url: https://github.com/wushenrong
 - platform: bluesky
   platform_name: Bluesky
-  user_url: https://bsky.app/profile/wushenrong.bsky.social
+  user_url: https://bsky.app/profile/wushenrong.github.io
 - platform: mastodon
   platform_name: Mastodon
   user_url: https://social.restless.systems/@TwoPizza9621536
