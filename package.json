@@ -3,7 +3,7 @@
     "@biomejs/biome": "1.9.4",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
-    "htmlnano": "^2.1.1",
+    "htmlnano": "^2.1.2",
     "minify-xml": "^4.5.2",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
