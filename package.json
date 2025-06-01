@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "cssnano": "^7.0.6",
+    "cssnano": "^7.0.7",
     "cssnano-preset-advanced": "^7.0.6",
     "htmlnano": "^2.1.2",
     "minify-xml": "^4.5.2",
