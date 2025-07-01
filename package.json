@@ -9,7 +9,7 @@
     "postcss-cli": "^11.0.0",
     "posthtml": "^0.16.6",
     "posthtml-cli": "^0.10.0",
-    "terser": "^5.37.0"
+    "terser": "^5.43.1"
   },
   "name": "wushenrong.github.io",
   "private": true
