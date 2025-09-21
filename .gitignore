@@ -6,7 +6,7 @@
 
 # VSCode
 .vscode/*
-!.vscode/settings.json.orig
+!.vscode/settings.json
 !.vscode/ltex.hiddenFalsePositives.en-US.txt
 !.vscode/ltex.dictionary.en-US.txt
 
