@@ -61,7 +61,7 @@ jobs:
       - name: Minify HTML, XML, and SVG
         run: >
           npx html-minifier-next --input-dir ./_site --output-dir ./_site
-            --file-ext html,xml,svg --collapse-whitespace --minify-css true
+          --file-ext html,xml,svg --collapse-whitespace --minify-css true
 
       - name: Minify JSON
         working-directory: ./_site/assets/favicon
