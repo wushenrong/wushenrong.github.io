@@ -1,28 +1,49 @@
 ---
-layout: default
+layout: base
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{- page.date | date_to_long_string: 'ordinal', 'US' -}}
-      </time>
-      {%- if page.last_modified_at %}
-        •
-        {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          Last Modified: {{ mdate | date_to_long_string: 'ordinal', 'US' -}}
-        </time>
+    <div class="post-meta">
+      {%- assign date_format = site.minima.date_format | default: '%b %-d, %Y' -%}
+      {% assign pdate = page.date | date_to_xmlschema %}
+      {%- if page.modified_date -%}
+        <span class="meta-label">Published:</span>
       {%- endif %}
-      <span itemprop="timeRequired">• Reading time: ~{{ content | reading_time | pluralize: 'minute' }}</span>
-    </p>
+      <time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
+        {{ pdate | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        <span class="bullet-divider">•</span>
+        <span class="meta-label">Updated:</span>
+        {%- assign mdate = page.modified_date | date_to_xmlschema %}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author %}
+        <div class="{% unless page.modified_date %}force-inline {% endunless %}post-authors">
+          {%- for author in page.author %}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span class="p-author h-card" itemprop="name">{{ author }}</span></span
+            >
+            {%- if forloop.last == false %}, {% endif -%}
+          {% endfor %}
+        </div>
+      {%- endif %}
+    </div>
+    <div class="post-meta">
+      <span class="meta-label">Reading Time:</span>
+      <span>~{{ content | reading_time | pluralize: 'minute' }}</span>
+    </div>
     <p itemprop="description">{{ page.description | escape }}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">{%- include anchor_headings.liquid html=content -%}</div>
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden>Link to this article</a>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
 {%- if site.related_posts.size >= 8 -%}
@@ -32,13 +53,14 @@ layout: default
     <ul class="post-list">
       {%- for post in site.related_posts offset: 1 limit: 3 -%}
         <li>
-          <span class="post-meta">
-            {{- post.date | date_to_long_string: 'ordinal', 'US' }}
-            | Reading time: ~{{ post.content | reading_time | pluralize: 'minute' -}}
-          </span>
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="bullet-divider">•</span>
+          <span class="post-meta">Reading Time: ~{{ post.content | reading_time | pluralize: 'minute' }}</span>
+
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h3>
+
           <p>{{ post.description | escape }}</p>
         </li>
       {%- endfor -%}

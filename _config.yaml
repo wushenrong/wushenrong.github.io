@@ -7,8 +7,8 @@ title: Samuel Wu
 tagline: What is loving without knowing we are left to die
 description: >-
   I'm Samuel, a Chinese-American student interested in technology, open source,
-  and video games. Currently working on a computer science degree.
-url: https://wushenrong.github.io
+  and video games.
+url: https://wushenrong.github.io/
 repository: wushenrong/wushenrong.github.io
 
 # Favicon
@@ -25,6 +25,29 @@ author:
   name: Samuel Wu
   email: twopizza9621536@gmail.com
   url: https://wushenrong.github.io
+
+minima:
+  nav_pages:
+    - pages/projects.html
+    - pages/resume.html
+    - pages/about.md
+  show_excerpts: true
+  social_links:
+    - title: Samuel's GitHub Account
+      icon: github
+      url: https://github.com/wushenrong
+    - title: Samuel at BlueSky
+      icon: bluesky
+      url: https://bsky.app/profile/wushenrong.github.io
+    - title: Samuel at Mastodon
+      icon: mastodon
+      url: https://social.restless.systems/@TwoPizza9621536
+    - title: Samuel at Tumblr
+      icon: tumblr
+      url: https://www.tumblr.com/blog/wushenrong
+    - title: Samuel at Steam
+      icon: steam
+      url: https://steamcommunity.com/id/wushenrong/
 
 # Page defaults and links
 permalink: /:title/
@@ -47,13 +70,14 @@ defaults:
     values:
       layout: page
 
-jekyll-archives:
-  enabled:
-    - year
+  - scope:
+      path: ""
+    values:
+      layout: default
 
-header_pages:
-  - pages/about.md
-  - pages/contact.md
+# SASS/SCSS options
+sass:
+  style: compressed
 
 # KaTeX support
 jektex:
@@ -71,13 +95,11 @@ liquid:
 
 # Exclude files
 exclude:
-  - biome.json
-  - frontmatter.json
+  - .ruby-lsp
   - LICENSE
   - LICENSES
   - package-lock.json
   - package.json
-  - postcss.config.js
   - README.md
   - REUSE.toml
 

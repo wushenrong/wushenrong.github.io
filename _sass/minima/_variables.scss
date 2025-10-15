@@ -4,26 +4,35 @@
  * SPDX-License-Identifier: MIT
  */
 
+@charset "utf-8";
+
 // Define defaults for each variable.
-$base-font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-  Cantarell, Noto Sans, sans-serif;
-$code-font-family: ui-monospace, SF Mono, Monaco, Droid Sans Mono,
-  Source Code Pro, Cascadia Code, Menlo, Consolas, DejaVu Sans Mono,
-  monospace;
+
+$base-font-family:
+  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji",
+  Roboto, Helvetica, Arial, sans-serif;
+$code-font-family:
+  "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size: 16px;
-$base-font-weight: normal;
+$base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
+
 $spacing-unit: 30px;
+
 $table-text-align: left;
 
 // Width of the content area
 $content-width: 800px;
-$on-medium: 600px;
-$on-large: 800px;
+
+$on-palm: 600px;
+$on-laptop: 800px;
+
+$on-medium: $on-palm;
+$on-large: $on-laptop;
 
 // Use media queries like this:
-// @include media-query($on-medium) {
+// @include media-query($on-palm) {
 //   .wrapper {
 //     padding-right: $spacing-unit / 2;
 //     padding-left: $spacing-unit / 2;
@@ -38,5 +47,5 @@ $on-large: 800px;
 }
 
 @mixin relative-font-size($ratio) {
-  font-size: $ratio * 1rem;
+  font-size: #{$ratio}rem;
 }

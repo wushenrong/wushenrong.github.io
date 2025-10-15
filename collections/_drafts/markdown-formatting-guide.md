@@ -3,7 +3,6 @@ title: Markdown Formatting Guide
 description: >-
     An opinionated style guide on how to format Markdown in a document and on
     the web.
-jektex: false
 ---
 
 After getting my site rebuilt, I think it's a great time to create a formatting
@@ -289,10 +288,10 @@ no-hard-tabs:
     spaces_per_tab: 4
 ```
 
-## Frontmatter
+## Front Matter
 
-A Markdown document may optionally have a YAML frontmatter as a preamble that is
-wrapped with three dashes `-`.
+A Markdown document may optionally have a YAML front matter as a preamble that
+is wrapped with three dashes `-`.
 
 Example:
 
@@ -306,11 +305,11 @@ Some text here.
 ```
 
 Rational: Documentation and authoring tools that convert Markdown to HTML use
-frontmatter for metadata. YAML is used as it's much more natural to read than
+front matter for metadata. YAML is used as it's much more natural to read than
 JSON or TOML at the beginning on the document, and most tools support a YAML
-frontmatter.
+front matter.
 
-Enforcement: If frontmatter is used, change it to be in YAML and warped with
+Enforcement: If front matter is used, change it to be in YAML and warped with
 three dashes `-`.
 
 ## Headings

@@ -1,0 +1,58 @@
+---
+title: Projects
+permalink: /projects/
+---
+{%- assign active_repos = site.github.public_repositories | where: 'archived', 'false' -%}
+{%- assign most_stared = active_repos | sort: 'stars' -%}
+
+<p>A showcase of projects that I do in my spare time and for university.</p>
+
+<section>
+  <h2>Projects Under This Site</h2>
+  {%- assign pages_repos = most_stared | where: 'has_pages', 'true' -%}
+  <ul>
+    {%- for repo in pages_repos -%}
+      {%- unless repo.homepage == site.url or repo.topics contains 'uofsc' -%}
+        <li>
+          <a href="{{ repo.homepage }}">{{ repo.name | escape }}</a>
+          <span class="bullet-divider">—</span>
+          <a href="{{ repo.html_url }}">Repository</a>
+          <p>{{ repo.description | escape }}</p>
+        </li>
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <h2>University Projects</h2>
+  {%- assign uni_repos = active_repos | where_exp: 'repo', 'repo.topics contains "uofsc"' -%}
+  {%- assign sorted_uni_repos = uni_repos | sort: 'created_at' | reverse -%}
+  <ul>
+    {%- for repo in sorted_uni_repos -%}
+      <li>
+        {%- if repo.homepage and repo.homepage != '' -%}
+          <a href="{{ repo.homepage }}">{{ repo.name | escape }}</a>
+          <span class="bullet-divider">—</span>
+          <a href="{{ repo.html_url }}">Repository</a>
+        {%- else -%}
+          <a href="{{ repo.html_url }}">{{ repo.name | escape }}</a>
+        {%- endif -%}
+        <p>{{ repo.description | escape }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <h2>Other Projects</h2>
+  {%- assign showcase_repos = most_stared | where_exp: 'repo', 'repo.topics contains "showcase"' -%}
+  <ul>
+    {%- for repo in showcase_repos -%}
+      <li>
+        <a href="{{ repo.html_url }}">{{ repo.name | escape }}</a>
+        <p>{{ repo.description | escape }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>

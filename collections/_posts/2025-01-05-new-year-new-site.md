@@ -2,7 +2,8 @@
 title: New Year, New Site
 description: >-
     How to create an accessible Jekyll site with the default Minima theme for
-    the new year
+    the new year.
+jektex: true
 ---
 
 After a detour of creating a [portfolio site](/CSCE190) for my CSCE190 class,
@@ -56,7 +57,7 @@ features that I don't want like CSS injection at build time for admonitions.
 Changing a setting in a plugin that is not using `_config.yaml`. Using a plugin
 that is not hosted on [RubyGems](https://rubygems.org/). See the `_plugins`
 folder at <{{ site.github.repository_url }}> for those examples.
-<!-- LTex: enabled=true -->
+<!-- LTeX: enabled=true -->
 
 But the major benefit to Jekyll is that it provides a default theme that is has
 a minimal design, [Minima](https://github.com/jekyll/minima). The latest version
@@ -85,12 +86,12 @@ contrast of at least 4.5:1, still it's difficult to satisfy.
 Additional modifications I made are edits to the header and footer, including
 replacing the icons with [Font Awesome's](https://fontawesome.com). Update the
 styles to account for breaking changes in [Sass](https://sass-lang.com). Add
-[$$\jektex$$](https://github.com/yagarea/jektex) to render math expressions
-using [$$\KaTeX$$](https://katex.org). Kramdown does have math support with
-$$\KaTeX$$ but its more out of date than $$\jektex$$, and it does not support
-the usual [$$\LaTeX$$](https://www.latex-project.org/) syntax for math mode. But
-I cannot escape them in code blocks yet, so sticking to the double dollar
-kramdown syntax is recommended and more portable.
+[Jektex](https://github.com/yagarea/jektex) to render math expressions using
+[KaTeX](https://katex.org). Kramdown does have math support with $$\KaTeX$$ but
+its more out of date than $$\jektex$$, and it does not support the usual
+[LaTeX](https://www.latex-project.org/) syntax for math mode. But I cannot
+escape them in code blocks yet, so sticking to the double dollar kramdown syntax
+is recommended and more portable.
 
 ```markdown
 $$a^{2} + b^{2} = c^{2}$$
@@ -125,4 +126,4 @@ formatters, minifiers, [pre-commit](https://pre-commit.com/), and GitHub Actions
 to build and host the site. And it's much cleaner and nicer than before. Any
 modifications and source code of this site can be seen at
 <{{ site.github.repository_url }}>.
-<!-- LTex: enabled=true -->
+<!-- LTeX: enabled=true -->

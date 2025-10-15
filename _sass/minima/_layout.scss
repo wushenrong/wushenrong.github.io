@@ -4,10 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-// Import Sass math function
-@use "sass:math";
-
-// Import colors and variables
 @use "minima/colors" as *;
 @use "minima/variables" as *;
 
@@ -15,23 +11,23 @@
  * Site header
  */
 .site-header {
-  // Positioning context for the mobile navigation icon
   position: relative;
+  width: 100%;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
+  background-color: $background-color;
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
 }
 
 .site-title {
   @include relative-font-size(1.625);
-
-  float: left;
-  margin-bottom: 0;
   font-weight: 300;
   letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
 
-  @include media-query($on-medium) {
+  @include media-query($on-palm) {
     padding-right: 45px;
   }
 
@@ -42,89 +38,89 @@
 }
 
 .site-nav {
-  position: absolute;
-  top: 9px;
-  right: $spacing-unit * 0.5;
-  text-align: right;
-  background-color: $background-color;
-  border: 1px solid $border-color-01;
-  border-radius: 5px;
+  float: right;
+  border: none;
+  background-color: inherit;
 
-  .nav-trigger {
+  label[for="nav-trigger"],
+  #nav-trigger {
     display: none;
   }
 
-  .menu-icon {
-    float: right;
-    width: 36px;
-    height: 26px;
-    padding-top: 10px;
-    line-height: 0;
-    text-align: center;
-
-    > svg path {
-      fill: $border-color-03;
-    }
-  }
-
-  label[for="nav-trigger"] {
-    z-index: 2;
-    display: block;
-    float: right;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-  }
-
-  input ~ .trigger {
-    display: none;
-    clear: both;
-  }
-
-  input:checked ~ .trigger {
-    display: block;
-    padding-bottom: 5px;
-  }
-
-  .page-link {
-    display: block;
-    padding: 5px 10px;
-    margin-left: 20px;
-    line-height: $base-line-height;
+  .nav-item {
     color: $text-color;
 
-    // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 0;
+      margin-right: $spacing-unit * 0.5;
     }
   }
 
-  @media screen and (min-width: $on-medium) {
-    position: static;
-    float: right;
-    background-color: inherit;
-    border: none;
+  @include media-query($on-medium) {
+    position: absolute;
+    top: 9px;
+    right: $spacing-unit * 0.6;
+    background-color: $background-color;
+    border: 1px solid $border-color-01;
+    border-radius: 5px;
+    text-align: right;
 
     label[for="nav-trigger"] {
-      display: none;
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
     }
 
     .menu-icon {
-      display: none;
-    }
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 6px;
+      text-align: center;
 
-    input ~ .trigger {
-      display: block;
-    }
-
-    .page-link {
-      display: inline;
-      padding: 0;
-      margin-left: auto;
-
-      &:not(:last-child) {
-        margin-right: 20px;
+      > svg path {
+        fill: $border-color-03;
       }
+    }
+
+    #nav-trigger {
+      ~ label[for="nav-trigger"] .menu-icon {
+        &::before {
+          font-size: 1.25em;
+        }
+      }
+
+      ~ .nav-items {
+        clear: both;
+        display: none;
+      }
+
+      &:checked {
+        ~ label[for="nav-trigger"] .menu-icon {
+          &::before {
+            font-size: 1.5em;
+          }
+        }
+
+        ~ .nav-items {
+          display: block;
+          padding-bottom: 5px;
+
+          .nav-item {
+            margin-left: 20px;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+
+    .nav-item {
+      display: block;
+      padding: 5px 0;
+      color: $text-color;
+      line-height: $base-line-height;
     }
   }
 }
@@ -133,13 +129,12 @@
  * Site footer
  */
 .site-footer {
-  padding: $spacing-unit 0;
   border-top: 1px solid $border-color-01;
+  padding: $spacing-unit 0;
 }
 
 .footer-heading {
   @include relative-font-size(1.125);
-
   margin-bottom: $spacing-unit * 0.5;
 }
 
@@ -149,15 +144,14 @@
 
 .contact-list,
 .social-media-list {
-  margin-left: 0;
   list-style: none;
+  margin-left: 0;
 }
 
 .footer-col-wrapper,
 .social-links {
   @include relative-font-size(0.9375);
-
-  color: $brand-color;
+  color: $brand-color-dimmed;
 }
 
 .footer-col {
@@ -212,8 +206,8 @@
  * Page content
  */
 .page-content {
-  flex: 1 0 auto;
   padding: $spacing-unit 0;
+  flex: 1 0 auto;
 }
 
 .page-heading {
@@ -235,12 +229,11 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $brand-color;
+  color: $brand-color-dimmed;
 }
 
 .post-link {
   display: block;
-
   @include relative-font-size(1.5);
 }
 
@@ -249,14 +242,41 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+  padding-bottom: 18px;
+  text-align: center;
+  border-bottom: 1px solid $border-color-01;
+}
+
+.post-meta {
+  .bullet-divider {
+    padding-inline: 15px;
+  }
+
+  .meta-label {
+    font-weight: 600;
+  }
+
+  .force-inline {
+    display: inline;
+
+    &::before {
+      content: "•";
+      padding-inline: 5px;
+    }
+  }
+
+  .post-authors {
+    margin-top: 3px;
+  }
 }
 
 .post-title,
 .post-content h1 {
+  margin-bottom: 10px;
   @include relative-font-size(2.625);
-
-  line-height: 1.15;
+  font-weight: $base-font-weight;
   letter-spacing: -1px;
+  line-height: 1.15;
 
   @media screen and (min-width: $on-large) {
     @include relative-font-size(2.625);
@@ -304,12 +324,20 @@
   }
 }
 
+.comments-disabled-message {
+  text-align: center;
+  font-weight: 300;
+}
+
 .social-media-list {
   display: table;
   margin: 0 auto;
 
   li {
     float: left;
+    min-width: 45px;
+    min-height: 45px;
+    text-align: center;
     margin: 5px 10px 5px 0;
 
     &:last-of-type {
@@ -332,29 +360,85 @@
  * Pagination navbar
  */
 .pagination {
-  margin-bottom: $spacing-unit;
-
-  /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder -- Markers show up for pagination */
-  @extend .social-media-list;
+  display: table;
+  margin: 0 auto;
+  list-style-type: none;
 
   li {
-    /* stylelint-disable-next-line no-descending-specificity -- Markers show up for pagination */
+    float: left;
+    margin: 0 3px;
+    min-width: 45px;
+    min-height: 45px;
+    text-align: center;
+
+    a {
+      display: block;
+      text-decoration: none;
+      border: 1px solid $border-color-01;
+
+      &:hover {
+        border-color: $border-color-02;
+      }
+    }
+
     a,
     div {
-      box-sizing: border-box;
       min-width: 41px;
+      padding: 10px 12px;
       text-align: center;
+      box-sizing: border-box;
     }
 
     div {
-      display: block;
-      padding: $spacing-unit * 0.25;
       border: 1px solid transparent;
 
       &.pager-edge {
         color: $brand-color;
         border: 1px dashed;
       }
+
+      &.current-page {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/**
+ * Task-lists
+ */
+
+.task-list {
+  margin-left: 0;
+  padding-left: $spacing-unit * 0.6;
+}
+
+.task-list-item {
+  list-style-type: none;
+
+  &-checkbox {
+    position: relative;
+    margin-right: $spacing-unit * 0.3;
+    margin-left: -$spacing-unit * 0.5;
+    appearance: none;
+    border: 8px solid $border-color-01;
+    vertical-align: text-top;
+    z-index: -1;
+
+    &::after {
+      position: absolute;
+      top: -8px;
+      left: -3px;
+      width: 4px;
+      height: 10px;
+      content: "";
+      border: solid transparent;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    &:checked::after {
+      border-color: $border-color-03;
     }
   }
 }

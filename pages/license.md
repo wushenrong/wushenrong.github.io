@@ -70,8 +70,8 @@ for writers, and it is licensed under the [MIT License].
 
 ## Math Support
 
-This site includes CSS and fonts from [$$\KaTeX$$](https://katex.org) to render
-$$\LaTeX$$ math expressions, which it is under the [MIT License].
+This site includes CSS and fonts from [KaTeX](https://katex.org) to render LaTeX
+math expressions, which it is under the [MIT License].
 
 ## Icons
 
@@ -87,15 +87,6 @@ code, the [Open Font License][ofl] for fonts, and the
 
 ## Layout and Styles
 
-Some layout inspiration is from [Tim Coombs](https://blog.slowb.ro/). Anchor
-links are from
-[Jekyll Anchor Headings](https://github.com/allejo/jekyll-anchor-headings) under
-the [MIT License].
-
-Some [screen reader only styles][sr-only] are from
-[Kitty Giraudel](https://kittygiraudel.com/snippets/sr-only-class/) is licensed
-under the [MIT License]. Other styles are from the
-[Poole theme](https://github.com/poole/lanyon) under the [MIT License], and
-[Octicons] under the [MIT License].
-
-[sr-only]: https://codepen.io/ffoodd/pen/gwKeyq
+Some layout inspiration is from [Tim Coombs](https://blog.slowb.ro/). Some
+styles are from the [Poole theme](https://github.com/poole/lanyon) under the
+[MIT License], and [Octicons] under the [MIT License].

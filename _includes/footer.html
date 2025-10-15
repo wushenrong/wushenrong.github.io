@@ -1,65 +1,55 @@
-<!--
-  SPDX-FileCopyrightText: 2016-present Parker Moore and the minima contributors
-
-  SPDX-License-Identifier: MIT
--->
 <footer class="site-footer h-card">
   <data class="u-url" value="{{ '/' | relative_url }}"></data>
 
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ 'feed.xml' | absolute_url }}" type="application/atom+xml">
-            <svg class="svg-icon orange" aria-hidden="true" role="img">
-              <use
-                href="{{ 'assets/fa-icons.svg?v=' | append: site.github.build_revision | append: '#rss' | relative_url }}">
-              </use>
-            </svg><span>RSS/Atom Feed</span>
-          </a>
-        </p>
-
+        {%- if site.author %}
+          <ul class="contact-list">
+            {% if site.author.name -%}
+              <li class="p-name">{{ site.author.name | escape }}</li>
+            {% endif -%}
+            {% if site.author.email -%}
+              <li>
+                <a
+                  class="u-email"
+                  href="mailto:{{ site.author.email | encode_email }}"
+                >
+                  {{ site.author.email }}
+                </a>
+              </li>
+            {%- endif %}
+          </ul>
+        {%- endif %}
+        {%- assign date_format = site.minima.date_format | default: '%b %-d, %Y' -%}
+        {% assign bdate = site.time | date_to_xmlschema %}
         <ul class="contact-list">
-          <li class="p-name">{{ site.author.name | escape }}</li>
           <li>
-            <a class="u-email" href="mailto:{{ site.author.email | encode_email }}">{{ site.author.email }}</a>
+            This site is hosted on
+            <a href="{{ site.github.repository_url }}">GitHub</a>.
+          </li>
+          <li>
+            Built with <a href="https://jekyllrb.com">Jekyll</a> on
+            <time datetime="{{ bdate }}">{{ bdate | date: date_format }}</time>.
           </li>
         </ul>
-
-        <p>
-          This site is hosted on <a href="{{ site.github.repository_url }}">GitHub</a>.
-          <br>
-          And built with <a href="https://jekyllrb.com">Jekyll</a> on
-          <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date_to_string: 'ordinal', 'US' }}</time>.
-        </p>
       </div>
 
       <div class="footer-col">
         <p>{{ site.description | escape }}</p>
 
         <p xmlns:cc="http://creativecommons.org/ns#">
-          Unless stated otherwise, content on this site is licensed under the
-          <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-          <a rel="license" href="{{ '/license/' | relative_url }}">See the license page for more information</a>.
+          Except where otherwise
+          <a href="{{ '/license/' | relative_url }}">noted</a>, content on this site is licensed under the
+          <a
+            rel="license"
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            >CC BY-SA 4.0</a
+          >.
         </p>
       </div>
     </div>
 
-    <div class="social-links">
-      <ul class="social-media-list">
-        {%- for social in site.data.socials -%}
-          <li>
-            <a rel="me" href="{{ social.user_url }}" aria-label="My {{ social.platform_name }} Account">
-              <svg class="svg-icon grey" aria-labelledby="{{ social.platform }}-title" role="img">
-                <title id="{{ social.platform }}-title">My {{ social.platform_name }} Account</title>
-                <use
-                  href="{{ 'assets/fa-icons.svg?v=' | append: site.github.build_revision | append: '#' | append: social.platform | relative_url }}">
-                </use>
-              </svg>
-            </a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
+    <div class="social-links">{%- include_cached social.html -%}</div>
   </div>
 </footer>

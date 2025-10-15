@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-// Import colors and variables
 @use "minima/colors" as *;
 @use "minima/variables" as *;
 
@@ -31,23 +30,28 @@ dd,
 ol,
 ul,
 figure {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 /**
  * Basic styling
  */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
-    $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  overflow-wrap: break-word;
   background-color: $background-color;
   text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
 }
 
 /**
@@ -79,8 +83,8 @@ hr {
  * `main` element
  */
 main {
-  /* Default value of `display` of `main` element is 'inline' in IE 11. */
   display: block;
+  /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
 /**
@@ -126,7 +130,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $base-font-weight;
+  color: $heading-color;
+  font-weight: 500;
 }
 
 /**
@@ -142,7 +147,8 @@ a {
 
   &:hover {
     color: $link-hover-color;
-    text-decoration: underline;
+    text-decoration: underline $brand-color;
+    text-underline-offset: 3px;
   }
 
   .social-media-list &:hover {
@@ -158,12 +164,11 @@ a {
  * Blockquotes
  */
 blockquote {
-  padding-left: $spacing-unit * 0.5;
-  font-style: italic;
   color: $brand-color;
   border-left: 4px solid $border-color-01;
-
+  padding-left: $spacing-unit * 0.5;
   @include relative-font-size(1.05);
+  font-style: italic;
 
   > :last-child {
     margin-bottom: 0;
@@ -181,54 +186,85 @@ blockquote {
 pre,
 code {
   font-family: $code-font-family;
-  font-size: 0.9375em;
   background-color: $code-background-color;
-  border: 1px solid $border-color-01;
-  border-radius: 3px;
-}
 
-code {
-  padding: 1px 5px;
+  @include media-query($on-palm) {
+    font-family: monospace;
+  }
 }
 
 pre {
   padding: 8px 12px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: $heading-color;
   overflow-x: auto;
 
   > code {
-    padding-right: 0;
-    padding-left: 0;
-    border: 0;
+    display: inline-block;
+    width: 100%;
   }
 }
 
-.highlight {
-  background: $code-background-color;
+div.highlight,
+figure.highlight {
+  @extend %vertical-rhythm;
+  border: 1px solid $border-color-01;
   border-radius: 3px;
 
-  @extend %vertical-rhythm;
-
-  .highlighter-rouge & {
-    background: $code-background-color;
+  pre {
+    margin: 0;
   }
+
+  table,
+  tbody,
+  th,
+  tr,
+  td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .lineno,
+  .gl {
+    text-align: right;
+  }
+}
+
+figure.highlight {
+  table {
+    margin: -8px -12px -14px;
+  }
+
+  td.gutter {
+    border-right: 1px solid $border-color-01;
+  }
+
+  td.code {
+    width: 100%;
+  }
+}
+
+code.highlighter-rouge {
+  padding: 1px 5px;
+  font-size: 14px;
+  border: 1px solid $border-color-01;
+  border-radius: 3px;
 }
 
 /**
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
-  padding-right: $spacing-unit * 0.5;
-  padding-left: $spacing-unit * 0.5;
-  margin-right: auto;
-  margin-left: auto;
-
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
   @extend %clearfix;
 
-  @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+  @media screen and (max-width: $on-medium) {
+    padding-right: $spacing-unit * 0.6;
+    padding-left: $spacing-unit * 0.6;
   }
 }
 
@@ -236,39 +272,36 @@ pre {
  * Clearfix
  */
 %clearfix:after {
+  content: "";
   display: table;
   clear: both;
-  content: "";
 }
 
 /**
  * Icons
  */
-.orange {
-  color: #f66a0a;
-}
 
 .grey {
-  color: $brand-color;
+  color: #828282;
 }
 
 .svg-icon {
-  display: inline-block;
   width: 1.25em;
   height: 1.25em;
-  overflow: visible;
+  display: inline-block;
+  fill: currentColor;
   vertical-align: text-bottom;
-  fill: currentcolor;
+  overflow: visible;
 }
 
 /**
  * Tables
  */
 table {
-  width: 100%;
   margin-bottom: $spacing-unit;
-  color: $table-text-color;
+  width: 100%;
   text-align: $table-text-align;
+  color: $table-text-color;
   border-collapse: collapse;
   border: 1px solid $table-border-color;
 
@@ -280,11 +313,12 @@ table {
 
   th,
   td {
-    padding: ($spacing-unit * 33.3333 * 0.01) ($spacing-unit * 0.5);
+    padding: ($spacing-unit * 33.3333333333 * 0.01) ($spacing-unit * 0.5);
   }
 
   th {
     background-color: $table-header-bg-color;
+    color: $table-header-text-color;
     border: 1px solid $table-header-border;
   }
 
@@ -292,8 +326,10 @@ table {
     border: 1px solid $table-border-color;
   }
 
-  @include media-query($on-large) {
+  @include media-query($on-laptop) {
     display: block;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }

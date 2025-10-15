@@ -7,7 +7,7 @@ version = 1
 [[annotations]]
 SPDX-FileCopyrightText = "2025 Samuel Wu"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
-path = ["collections/**", "favicon.png", "pages/**"]
+path = ["assets/favicon/**", "collections/**", "pages/**"]
 
 [[annotations]]
 SPDX-FileCopyrightText = "2013-2020 Khan Academy and other contributors"
@@ -17,20 +17,18 @@ path = ["assets/fonts/KaTeX_*"]
 [[annotations]]
 SPDX-FileCopyrightText = "2016-present Parker Moore and the minima contributors"
 SPDX-License-Identifier = "MIT"
-path = ["_layouts/**", "pages/404.html"]
+path = ["_includes/**", "_layouts/**", "pages/404.html"]
 
 [[annotations]]
 SPDX-FileCopyrightText = "2025 Samuel Wu"
 SPDX-License-Identifier = "MIT-0"
 path = [
-  ".frontmatter/**",
-  ".postcssrc.json",
   ".ruby-version",
   ".vscode/**",
   ".well-known/**",
+  "assets/favicon/site.webmanifest",
   "Gemfile.lock",
+  "package-lock.json",
+  "package.json",
   "README.md",
-  "biome.json",
-  "frontmatter.json",
-  "package*.json",
 ]

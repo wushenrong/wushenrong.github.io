@@ -1,0 +1,227 @@
+---
+---
+
+/*
+ * SPDX-FileCopyrightText: 2016-present Parker Moore and the minima contributors
+ * SPDX-FileCopyrightText: 2025 Samuel Wu
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/**
+ * Reset styles from Minima.
+ */
+
+$base-font-family: serif;
+$heading-font-family: system-ui, sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$base-font-weight: 400;
+
+$spacing-unit: 20px;
+
+$content-width: 800px;
+$on-palm: 600px;
+
+:root {
+  --resume-text-color: black;
+  --resume-background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    --resume-text-color: white;
+    --resume-background-color: black;
+  }
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+/**
+ * Reset some basic elements. From Minima.
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: var(--resume-text-color);
+  background-color: var(--resume-background-color);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+/**
+ * `main` element
+ */
+main {
+  display: block;
+  /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+/**
+ * Lists
+ */
+ul,
+ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-weight: 500;
+}
+
+/**
+ * Links
+ */
+a {
+  color: var(--resume-text-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline var(--resume-text-color);
+    text-underline-offset: 3px;
+  }
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  @extend %clearfix;
+
+  @media screen and (max-width: $on-palm) {
+    padding-right: $spacing-unit * 0.6;
+    padding-left: $spacing-unit * 0.6;
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * Resume Styles
+ */
+
+@page {
+  margin: 0.5in;
+  size: letter;
+}
+
+.flushed-list {
+  list-style: none;
+  margin-left: 0;
+
+  ul {
+    list-style: disc;
+  }
+
+  > li {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  h3 {
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 0;
+
+    :last-child {
+      margin-left: auto;
+    }
+
+    + span {
+      font-style: italic;
+    }
+  }
+}
+
+.resume-header {
+  line-height: 1.15;
+  text-align: center;
+
+  > h1 {
+    font-weight: bold;
+  }
+
+  > p {
+    font-family: $heading-font-family;
+  }
+}
+
+.section-heading {
+  border-bottom: 2px solid var(--resume-text-color);
+  border-top: 2px solid var(--resume-text-color);
+}
+
+.coursework {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: $spacing-unit;
+}
+
+.extracurricular li {
+  display: flex;
+
+  :last-child {
+    margin-left: auto;
+  }
+}

@@ -6,8 +6,10 @@ name: Deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: [main]
-    paths: [collections/_posts/**]
+    branches:
+      - main
+    paths:
+      - collections/_posts/**
   workflow_dispatch:
 
 permissions:
@@ -26,7 +28,7 @@ jobs:
       - name: Install prerequisites
         run: |
           sudo apt-get update
-          sudo apt-get install imagemagick liblapacke-dev libopenblas-dev
+          sudo apt-get install jq liblapacke-dev libopenblas-dev
 
       - name: Checkout site repository
         uses: actions/checkout@v4
@@ -56,20 +58,12 @@ jobs:
       - name: Install dependencies for minifiers
         run: npm ci
 
-      - name: Minify HTML
-        run: npx posthtml '_site/**/*.html' -o . -a
+      - name: Minify HTML, XML, and SVG
+        run: npx html-minifier-next --input-dir ./_site --output-dir ./_site \
+          --file-ext html,xml,svg --collapse-whitespace --minify-css true
 
-      - name: Minify CSS
-        run: npx postcss _site/**/*.css -r
-
-      - name: Minify RSS/Atom feed
-        run: npx minify-xml --in-place _site/feed.xml
-
-      - name: Minify sitemap
-        run: npx minify-xml --in-place _site/sitemap.xml
-
-      - name: Minify SVG icons
-        run: npx minify-xml --in-place _site/assets/fa-icons.svg
+      - name: Minify JSON
+        run: jq -c < _site/assets/favicon/site.webmanifest > _site/assets/favicon/site.webmanifest
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
