@@ -48,10 +48,10 @@ GEM
     ffi (1.17.2-x86_64-linux-gnu)
     fiddle (1.1.8)
     forwardable-extended (2.6.0)
-    google-protobuf (4.32.1-x64-mingw-ucrt)
+    google-protobuf (4.33.0-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.32.1-x86_64-linux-gnu)
+    google-protobuf (4.33.0-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
     html-pipeline (2.14.3)
@@ -148,7 +148,7 @@ GEM
       racc
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    prism (1.5.2)
+    prism (1.6.0)
     public_suffix (6.0.2)
     racc (1.8.1)
     rainbow (3.1.1)
