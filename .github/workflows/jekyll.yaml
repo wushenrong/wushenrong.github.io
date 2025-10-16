@@ -64,10 +64,6 @@ jobs:
           npx html-minifier-next --input-dir ./_site --output-dir ./_site
           --file-ext html,xml,svg --collapse-whitespace --minify-css true
 
-      - name: Minify JSON
-        working-directory: ./_site/assets/favicon
-        run: jq -c . ./site.webmanifest > ./site.webmanifest
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
 
