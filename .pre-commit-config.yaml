@@ -32,12 +32,12 @@ repos:
       - id: gitleaks
 
   - repo: https://github.com/fsfe/reuse-tool
-    rev: v6.1.2
+    rev: v6.2.0
     hooks:
       - id: reuse
 
   - repo: https://github.com/rubocop/rubocop
-    rev: 47735efc2b410578a196fd2758da87d01802c655 # frozen: v1.57.2
+    rev: b5cbaa96ae6c1f6b8b2a03748500dac64772e350  # frozen: v1.81.6
     hooks:
       - id: rubocop
         additional_dependencies:
