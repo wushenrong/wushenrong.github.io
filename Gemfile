@@ -20,7 +20,7 @@ gem "jekyll", "~> 4.4.1"
 gem "faraday-retry", "~> 2.2", ">= 2.2.1"
 
 group :jekyll_plugins do
-  gem "jektex", "~> 0.1"
+  gem "jektex", :github => "yagarea/jektex"
   gem "jekyll-email-protect", "~> 1.1"
   gem "jekyll-feed", "~> 0.17"
   gem "jekyll-github-metadata", "~> 2.16"
