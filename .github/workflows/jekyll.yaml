@@ -26,11 +26,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install prerequisites
-        run: |
-          sudo apt-get update
-          sudo apt-get install jq liblapacke-dev libopenblas-dev
-
       - name: Checkout site repository
         uses: actions/checkout@v5
 
