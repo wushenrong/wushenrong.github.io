@@ -92,9 +92,9 @@ liquid:
 
 # Exclude files
 exclude:
-  - .ruby-lsp/
+  - .ruby-lsp
   - LICENSE
-  - LICENSES/
+  - LICENSES
   - package-lock.json
   - package.json
   - README.md
@@ -102,4 +102,4 @@ exclude:
 
 # Include files
 include:
-  - .well-known/
+  - .well-known
