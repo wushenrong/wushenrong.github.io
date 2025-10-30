@@ -84,9 +84,6 @@ jektex:
   ignore:
     - "*.xml"
 
-# Latent Semantic Indexer
-lsi: true
-
 # Strict mode
 strict_front_matter: true
 liquid:

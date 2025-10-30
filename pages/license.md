@@ -88,5 +88,4 @@ code, the [Open Font License][ofl] for fonts, and the
 ## Layout and Styles
 
 Some layout inspiration is from [Tim Coombs](https://blog.slowb.ro/). Some
-styles are from the [Poole theme](https://github.com/poole/lanyon) under the
-[MIT License], and [Octicons] under the [MIT License].
+styles are from [Octicons] which is under the [MIT License].

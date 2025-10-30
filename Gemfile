@@ -6,21 +6,18 @@
 source "https://gem.coop"
 
 gem "fiddle", "~> 1.1"
-gem "logger", "~> 1.7"
 
-# Linter for local Jekyll plugins
-gem "rubocop", "~> 1.57", :require => false, :groups => [:development]
-gem "rubocop-jekyll", "~> 0.14", :groups => [:development]
+# Linter for local Jekyll development
+group :development do
+  gem "dotenv", "~> 3.1", ">= 3.1.7"
+  gem "rubocop", "~> 1.57", :require => false
+  gem "rubocop-jekyll", "~> 0.14"
+end
 
 # Jekyll and plugins
 gem "jekyll", "~> 4.4.1"
 
-gem "dotenv", "~> 3.1", ">= 3.1.7", :groups => [:development]
 gem "faraday-retry", "~> 2.2", ">= 2.2.1"
-
-gem "classifier-reborn", "~> 2.3"
-gem "numo-linalg", "~> 0.1"
-gem "numo-narray", "~> 0.9"
 
 group :jekyll_plugins do
   gem "jektex", "~> 0.1"

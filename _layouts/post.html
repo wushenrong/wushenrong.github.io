@@ -45,25 +45,3 @@ layout: base
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
-
-{%- if site.related_posts.size >= 8 -%}
-  <!-- Related Posts (MIT License) https://github.com/poole/lanyon -->
-  <aside class="post-related">
-    <h2 class="post-list-heading">Related Posts</h2>
-    <ul class="post-list">
-      {%- for post in site.related_posts offset: 1 limit: 3 -%}
-        <li>
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <span class="bullet-divider">•</span>
-          <span class="post-meta">Reading Time: ~{{ post.content | reading_time | pluralize: 'minute' }}</span>
-
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-
-          <p>{{ post.description | escape }}</p>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </aside>
-{%- endif -%}
