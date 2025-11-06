@@ -5,7 +5,18 @@ permalink: /resume/
 ---
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-  {% include head.html %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    {%- feed_meta -%}
+    <link id="main-stylesheet" rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-96x96.png' | relative_url }}" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon/favicon.svg' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
+  </head>
 
   <body>
     <main class="page-content" aria-label="Content">
