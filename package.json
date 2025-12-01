@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "html-minifier-next": "^3.2.1"
+    "html-minifier-next": "^4.6.1"
   },
   "name": "wushenrong.github.io",
   "private": true
