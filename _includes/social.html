@@ -4,20 +4,14 @@
       <a rel="me" href="{{ entry.url }}">
         <svg class="svg-icon grey" aria-labelledby="{{ entry.icon }}-title" role="img">
           <title id="{{ entry.icon }}-title">{{ entry.title }}</title>
-          <use
-            href="{{ '/assets/fa-icons.svg#' | append: entry.icon | relative_url }}"
-          ></use>
+          <use href="{{ '/assets/fa-icons.svg#' | append: entry.icon | relative_url }}"></use>
         </svg>
       </a>
     </li>
   {%- endfor -%}
   {% unless site.minima.hide_site_feed_link %}
     <li>
-      <a
-        href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" target="_blank" rel="noreferrer noopener">
         <svg class="svg-icon grey" aria-labelledby="rss-title" role="img">
           <title id="rss-title">Subscribe to syndication feed</title>
           <use href="{{ '/assets/fa-icons.svg#rss' | relative_url }}"></use>

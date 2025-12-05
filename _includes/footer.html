@@ -11,10 +11,7 @@
             {% endif -%}
             {% if site.author.email -%}
               <li>
-                <a
-                  class="u-email"
-                  href="mailto:{{ site.author.email | encode_email }}"
-                >
+                <a class="u-email" href="mailto:{{ site.author.email | encode_email }}">
                   {{ site.author.email }}
                 </a>
               </li>
@@ -41,15 +38,13 @@
         <p xmlns:cc="http://creativecommons.org/ns#">
           Except where otherwise
           <a href="{{ '/license/' | relative_url }}">noted</a>, content on this site is licensed under the
-          <a
-            rel="license"
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            >CC BY-SA 4.0</a
-          >.
+          <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
         </p>
       </div>
     </div>
 
-    <div class="social-links">{%- include_cached social.html -%}</div>
+    <div class="social-links">
+      {%- include_cached social.html -%}
+    </div>
   </div>
 </footer>
