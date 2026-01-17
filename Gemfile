@@ -16,9 +16,9 @@ group :development do
 end
 
 # Jekyll and plugins
-gem "jekyll", "~> 4.4.1"
+gem "jekyll", "~> 4.4"
 
-gem "faraday-retry", "~> 2.2", ">= 2.2.1"
+gem "faraday-retry", "~> 2.4"
 
 group :jekyll_plugins do
   gem "jektex", :github => "yagarea/jektex"

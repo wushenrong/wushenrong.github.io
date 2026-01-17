@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout site repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -57,7 +57,7 @@ jobs:
       - name: Minify HTML, XML, and SVG
         run: >
           npx html-minifier-next --input-dir ./_site --output-dir ./_site
-          --file-ext html,xml,svg --collapse-whitespace --minify-css true
+          --file-ext html,xml,svg --preset=comprehensive
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
