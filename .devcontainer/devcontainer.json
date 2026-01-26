@@ -1,6 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
-  "image": "ghcr.io/wushenrong/devcontainers/jekyll-node:latest",
-  "name": "Jekyll"
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		}
+	},
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+	"name": "Jekyll"
 }
