@@ -2,7 +2,8 @@
 title: Projects
 permalink: /projects/
 ---
-{%- assign active_repos = site.github.public_repositories | where: 'archived', 'false' -%}
+{%- assign repos = site.github.public_repositories -%}
+{%- assign active_repos = repos | where: 'archived', 'false' -%}
 {%- assign most_stared = active_repos | sort: 'stars' -%}
 
 <p>A showcase of projects that I do in my spare time and for university.</p>
@@ -26,7 +27,7 @@ permalink: /projects/
 
 <section>
   <h2>University Projects</h2>
-  {%- assign uni_repos = active_repos | where_exp: 'repo', 'repo.topics contains "uofsc"' -%}
+  {%- assign uni_repos = repos | where_exp: 'repo', 'repo.topics contains "uofsc"' -%}
   {%- assign sorted_uni_repos = uni_repos | sort: 'created_at' | reverse -%}
   <ul>
     {%- for repo in sorted_uni_repos -%}

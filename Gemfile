@@ -12,7 +12,6 @@ group :development do
   gem "dotenv", "~> 3.1", ">= 3.1.7"
   gem "rubocop", "~> 1.57", :require => false
   gem "rubocop-jekyll", "~> 0.14"
-  gem "ruby-lsp"
 end
 
 # Jekyll and plugins

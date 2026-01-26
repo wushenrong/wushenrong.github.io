@@ -1,41 +1,41 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"bierner.github-markdown-preview",
-				"christian-kohler.npm-intellisense",
-				"DavidAnson.vscode-markdownlint",
-				"EditorConfig.EditorConfig",
-				"ltex-plus.vscode-ltex-plus",
-				"ms-vscode.wordcount",
-				"Shopify.theme-check-vscode",
-				"sibiraj-s.vscode-scss-formatter",
-				"sissel.shopify-liquid",
-				"streetsidesoftware.code-spell-checker"
-			],
-			"settings": {
-				"[liquid]": {
-					"editor.defaultFormatter": "Shopify.theme-check-vscode"
-				},
-				"[scss]": {
-					"editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-				},
-				"files.associations": {
-					"*.html": "liquid"
-				},
-				"rubyLsp.rubyVersionManager": {
-					"identifier": "rvm"
-				}
-			}
-		}
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
-			"version": "lts"
-		}
-	},
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
-	"name": "Jekyll"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bierner.github-markdown-preview",
+        "christian-kohler.npm-intellisense",
+        "DavidAnson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
+        "ltex-plus.vscode-ltex-plus",
+        "ms-vscode.wordcount",
+        "Shopify.theme-check-vscode",
+        "sibiraj-s.vscode-scss-formatter",
+        "sissel.shopify-liquid",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "[liquid]": {
+          "editor.defaultFormatter": "Shopify.theme-check-vscode"
+        },
+        "[scss]": {
+          "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+        },
+        "files.associations": {
+          "*.html": "liquid"
+        },
+        "rubyLsp.rubyVersionManager": {
+          "identifier": "rvm"
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "image": "mcr.microsoft.com/devcontainers/jekyll:3.4-bookworm",
+  "name": "Jekyll"
 }
