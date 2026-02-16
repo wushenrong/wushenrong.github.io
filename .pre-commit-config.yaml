@@ -22,22 +22,22 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.18.1
+    rev: v0.21.0
     hooks:
       - id: markdownlint-cli2
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.28.0
+    rev: v8.30.0
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/fsfe/reuse-tool
-    rev: v6.1.2
+    rev: v6.2.0
     hooks:
       - id: reuse
 
   - repo: https://github.com/rubocop/rubocop
-    rev: 47735efc2b410578a196fd2758da87d01802c655 # frozen: v1.57.2
+    rev: 0dec9610860111400200366579a13398ab7de0d6  # frozen: v1.84.2
     hooks:
       - id: rubocop
         additional_dependencies:
