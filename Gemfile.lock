@@ -133,9 +133,9 @@ GEM
       prism (~> 1.5)
     net-http (0.9.1)
       uri (>= 0.11.1)
-    nokogiri (1.19.1-x64-mingw-ucrt)
+    nokogiri (1.19.3-x64-mingw-ucrt)
       racc (~> 1.4)
-    nokogiri (1.19.1-x86_64-linux-gnu)
+    nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
     octicons (19.8.0)
     octokit (6.1.1)
@@ -283,8 +283,8 @@ CHECKSUMS
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
   minitest (6.0.2) sha256=db6e57956f6ecc6134683b4c87467d6dd792323c7f0eea7b93f66bd284adbc3d
   net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
-  nokogiri (1.19.1-x64-mingw-ucrt) sha256=110d92ae57694ae7866670d298a5d04cd150fae5a6a7849957d66f171e6aec9b
-  nokogiri (1.19.1-x86_64-linux-gnu) sha256=1a4902842a186b4f901078e692d12257678e6133858d0566152fe29cdb98456a
+  nokogiri (1.19.3-x64-mingw-ucrt) sha256=8bb7132cad356c879a1286eaabcb5e68326cb2490317984280fbc62f456d506a
+  nokogiri (1.19.3-x86_64-linux-gnu) sha256=2f5078620fe12e83669b5b17311b32532a8153d02eee7ad06948b926d6080976
   octicons (19.8.0) sha256=392e5ab6705451d87816350f51a2295fcb44efb4a8d60a16a21e9a0d72c2afd0
   octokit (6.1.1) sha256=920e4a9d820205f70738f58de6a7e6ef0e2f25b27db954b5806a63105207b0bf
   parallel (1.27.0) sha256=4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130
