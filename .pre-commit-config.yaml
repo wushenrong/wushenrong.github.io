@@ -37,7 +37,7 @@ repos:
       - id: reuse
 
   - repo: https://github.com/rubocop/rubocop
-    rev: 2c867c028e29540c4d2372ec1925c92c682c06ec  # frozen: v1.87.0
+    rev: 82b8257ba77ac5225459d857070fcd04f9de8495  # frozen: v1.88.0
     hooks:
       - id: rubocop
         additional_dependencies:
